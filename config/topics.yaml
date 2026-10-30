@@ -1,0 +1,31 @@
+# One entry per research field. 'query' is an OpenAlex boolean search on titles and abstracts
+# (no commas: they separate OpenAlex filters). 'stop' lists keywords that restate the query and
+# are left out of the themes, clusters and gaps. 'events' are drawn on the publication trend.
+trade-credit-smes:
+  label: Trade credit and SMEs
+  query: '"trade credit" AND (SME OR SMEs OR "small and medium" OR "small business" OR "small firms")'
+  since: 1990
+  stop: [trade credit, sme, smes, small and medium-sized enterprises, small business, small firms]
+  events: {2008: Global financial crisis, 2020: COVID-19}
+  scopus_benchmark: 146  # articles found in Scopus with the narrower query of the original review
+
+ownership-and-boards:
+  label: Ownership and boards
+  query: >-
+    ("ownership structure" OR "ownership concentration" OR "family ownership" OR blockholder
+    OR blockholders OR "controlling shareholder" OR "large shareholders" OR "owner identity")
+    AND ("board of directors" OR "board composition" OR "board independence"
+    OR "independent directors" OR "board structure" OR "director appointment")
+  since: 1990
+  stop: [board of directors, ownership structure, corporate governance, ownership concentration]
+  events: {2002: Sarbanes-Oxley, 2008: Global financial crisis}
+
+ai-and-labour-costs:
+  label: AI, automation and labour costs
+  query: >-
+    ("artificial intelligence" OR automation OR robots OR "digital technologies")
+    AND ("labor cost" OR "labour cost" OR "labor costs" OR "labour costs" OR "cost stickiness"
+    OR "sticky costs" OR "cost behavior" OR "cost behaviour" OR "labor share" OR "labour share")
+  since: 1990
+  stop: [artificial intelligence, automation, labor costs, labour costs]
+  events: {2012: Deep learning breakthrough, 2022: ChatGPT}
