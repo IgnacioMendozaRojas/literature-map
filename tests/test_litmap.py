@@ -200,3 +200,4 @@ def test_gaps_skip_alternative_labels():
     gp = an.gaps(freq, Counter(), n_works=100)
     assert {"board composition", "board structure"} not in [{r.a, r.b} for r in gp.itertuples()]
     assert an.tokens("labour costs") & an.tokens("labor share") == {"labor"}
+    assert an.tokens("board independence") & an.tokens("independent directors")

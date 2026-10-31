@@ -117,9 +117,10 @@ def clusters(freq: Counter, pairs: Counter, min_pair: int = 2) -> list[list[str]
 
 
 def tokens(keyword: str) -> set[str]:
-    """Content words of a keyword, with British and American spellings merged."""
+    """Content words of a keyword, with British and American spellings merged and cut to six
+    letters, so that 'independence' and 'independent' count as the same word."""
     words = re.findall(r"[a-z0-9]+", keyword.lower().replace("labour", "labor"))
-    return {w for w in words if w not in {"and", "of", "the", "in", "for", "to", "a"}}
+    return {w[:6] for w in words if w not in {"and", "of", "the", "in", "for", "to", "a"}}
 
 
 def gaps(freq: Counter, pairs: Counter, n_works: int, n: int = 6, top: int = 20) -> pd.DataFrame:
