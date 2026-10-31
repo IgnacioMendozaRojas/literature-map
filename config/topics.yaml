@@ -1,11 +1,22 @@
 # One entry per research field. 'query' is an OpenAlex boolean search on titles and abstracts
 # (no commas: they separate OpenAlex filters). 'stop' lists keywords that restate the query and
 # are left out of the themes, clusters and gaps. 'events' are drawn on the publication trend.
+# 'fields' keeps only works whose main OpenAlex topic is in Business, Management and Accounting
+# (14), Decision Sciences (18) or Economics, Econometrics and Finance (20): without it, queries
+# on labour costs drift into engineering and agricultural robotics.
 trade-credit-smes:
   label: Trade credit and SMEs
   query: '"trade credit" AND (SME OR SMEs OR "small and medium" OR "small business" OR "small firms")'
   since: 1990
-  stop: [trade credit, sme, smes, small and medium-sized enterprises, small business, small firms]
+  fields: [14, 18, 20]
+  stop:
+    - trade credit
+    - sme
+    - smes
+    - small and medium-sized enterprises
+    - micro, small and medium enterprises
+    - small business
+    - small firms
   events: {2008: Global financial crisis, 2020: COVID-19}
   scopus_benchmark: 146  # articles found in Scopus with the narrower query of the original review
 
@@ -17,6 +28,7 @@ ownership-and-boards:
     AND ("board of directors" OR "board composition" OR "board independence"
     OR "independent directors" OR "board structure" OR "director appointment")
   since: 1990
+  fields: [14, 18, 20]
   stop: [board of directors, ownership structure, corporate governance, ownership concentration]
   events: {2002: Sarbanes-Oxley, 2008: Global financial crisis}
 
@@ -27,5 +39,6 @@ ai-and-labour-costs:
     AND ("labor cost" OR "labour cost" OR "labor costs" OR "labour costs" OR "cost stickiness"
     OR "sticky costs" OR "cost behavior" OR "cost behaviour" OR "labor share" OR "labour share")
   since: 1990
+  fields: [14, 18, 20]
   stop: [artificial intelligence, automation, labor costs, labour costs]
   events: {2012: Deep learning breakthrough, 2022: ChatGPT}

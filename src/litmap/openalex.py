@@ -32,14 +32,26 @@ def short_id(url: str | None) -> str:
     return (url or "").rsplit("/", 1)[-1]
 
 
-def filter_string(query: str, since: int, until: int) -> str:
+def filter_string(query: str, since: int, until: int, fields: list[int] | None = None) -> str:
+    """OpenAlex filter: the query on titles and abstracts, journal articles in the years, and
+    optionally only works whose main topic is in the given OpenAlex fields (e.g. 20 = Economics,
+    Econometrics and Finance; 14 = Business, Management and Accounting)."""
     q = " ".join(query.split())
     if "," in q:
         raise ValueError("OpenAlex filters are separated by commas; remove them from the query")
-    return (
+    flt = (
         f"title_and_abstract.search:{q},type:article,"
         f"publication_year:{since}-{until},is_retracted:false"
     )
+    if fields:
+        flt += ",primary_topic.field.id:" + "|".join(f"fields/{f}" for f in fields)
+    return flt
+
+
+def sample_key(flt: str) -> str:
+    """The filter without its year range, which moves forward every year: two snapshots with
+    the same key come from the same query."""
+    return ",".join(p for p in flt.split(",") if not p.startswith("publication_year:"))
 
 
 def compact(work: dict) -> dict:
@@ -149,12 +161,14 @@ def snapshot(
     client: Client, name: str, cfg: dict, previous: dict | None, today: date, limit: int = 6000
 ) -> dict:
     """Download one topic. Works not in the previous snapshot are listed as new."""
-    flt = filter_string(cfg["query"], cfg.get("since", 1990), today.year)
+    flt = filter_string(cfg["query"], cfg.get("since", 1990), today.year, cfg.get("fields"))
     count, works = client.works(flt, limit)
     from .analysis import foundations_ids  # local import keeps the download module light
 
     found = client.titles(foundations_ids(works, n=40))
-    old = {w["id"] for w in (previous or {}).get("works", [])}
+    # a changed query starts a new series: nothing counts as new against a different sample
+    same = bool(previous) and sample_key(previous.get("filter", "")) == sample_key(flt)
+    old = {w["id"] for w in previous.get("works", [])} if same else set()
     new = [w["id"] for w in works if old and w["id"] not in old]
     return {
         "topic": name,
@@ -165,5 +179,5 @@ def snapshot(
         "works": works,
         "foundations": found,
         "new_ids": new,
-        "previous_fetch": (previous or {}).get("fetched"),
+        "previous_fetch": (previous or {}).get("fetched") if same else None,
     }

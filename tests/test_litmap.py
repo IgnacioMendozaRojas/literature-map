@@ -184,3 +184,19 @@ def test_paging_with_and_without_key(monkeypatch, key):
     count, works = c.works("f", limit=6000)
     assert count == 250 and len(works) == 250 and works[-1]["id"] == "W249"
     assert ("cursor" in c.s.seen[0]) == bool(key) and c.calls == 3
+
+
+def test_fields_filter_and_sample_key():
+    f = oa.filter_string("q", 1990, 2026, fields=[20, 14])
+    assert f.endswith("primary_topic.field.id:fields/20|fields/14")
+    assert oa.sample_key(f) == oa.sample_key(oa.filter_string("q", 1990, 2027, fields=[20, 14]))
+    assert oa.sample_key(f) != oa.sample_key(oa.filter_string("q", 1990, 2026))
+
+
+def test_gaps_skip_alternative_labels():
+    from collections import Counter
+
+    freq = Counter({"board composition": 50, "board structure": 50, "leverage": 50})
+    gp = an.gaps(freq, Counter(), n_works=100)
+    assert {"board composition", "board structure"} not in [{r.a, r.b} for r in gp.itertuples()]
+    assert an.tokens("labour costs") & an.tokens("labor share") == {"labor"}

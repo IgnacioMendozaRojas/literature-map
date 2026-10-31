@@ -3,6 +3,7 @@ authors, themes, keyword clusters, under-connected themes and the field's founda
 
 from __future__ import annotations
 
+import re
 from collections import Counter
 from itertools import combinations
 
@@ -115,15 +116,23 @@ def clusters(freq: Counter, pairs: Counter, min_pair: int = 2) -> list[list[str]
     return sorted(out, key=lambda c: -sum(freq[k] for k in c))
 
 
+def tokens(keyword: str) -> set[str]:
+    """Content words of a keyword, with British and American spellings merged."""
+    words = re.findall(r"[a-z0-9]+", keyword.lower().replace("labour", "labor"))
+    return {w for w in words if w not in {"and", "of", "the", "in", "for", "to", "a"}}
+
+
 def gaps(freq: Counter, pairs: Counter, n_works: int, n: int = 6, top: int = 20) -> pd.DataFrame:
     """Under-connected themes: pairs of frequent keywords that appear together far less often
     than if they were independent (observed / expected co-occurrence, VOSviewer's association
-    strength scaled by the number of works). A low ratio flags a possible research gap."""
+    strength scaled by the number of works). A low ratio flags a possible research gap. Pairs
+    that share a word (board composition, board structure) are alternative labels for one theme,
+    not a gap, and are skipped."""
     common = [k for k, _ in freq.most_common(top)]
     rows = []
     for a, b in combinations(common, 2):
         expected = freq[a] * freq[b] / n_works
-        if expected < 3:  # too rare to say anything
+        if expected < 3 or tokens(a) & tokens(b):  # too rare to say anything
             continue
         observed = pairs.get(tuple(sorted((a, b))), 0)
         rows.append({"a": a, "b": b, "observed": observed, "expected": expected})

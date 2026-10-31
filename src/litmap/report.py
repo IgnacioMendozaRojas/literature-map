@@ -49,46 +49,71 @@ def fig_trend(name: str, cfg: dict, per_year: pd.Series, g: dict, fig: Path) -> 
     return title
 
 
+def cluster_layout(g: nx.Graph, comms: list[list[str]]) -> dict:
+    """Clusters on a circle, each laid out on its own, so the communities read as groups."""
+    import math
+
+    pos = {}
+    for i, comm in enumerate(comms):
+        angle = 2 * math.pi * i / len(comms) + math.pi / 4
+        cx, cy = math.cos(angle), math.sin(angle)
+        sub = nx.spring_layout(g.subgraph(comm), weight="weight", seed=7, scale=0.42)
+        for k, (x, y) in sub.items():
+            pos[k] = (cx + x, cy + y)
+    return pos
+
+
 def fig_map(name: str, cfg: dict, freq, pairs, comms: list[list[str]], fig: Path) -> str:
-    lead = comms[0][:3]
-    title = f"{cfg['label']}: {len(comms)} clusters of themes, the largest around {lead[0]}"
+    """Keyword network with one colour per cluster; the clusters are named in a key on the
+    right, and only each cluster's two most frequent keywords are labelled on the map."""
+    import textwrap
+
+    comms = [c for c in comms if len(c) >= 2][:6]
+    title = f"{cfg['label']}: the literature splits into {len(comms)} clusters of themes"
     sub = (
-        f"The {len(freq)} most frequent keywords; size = articles, links = articles sharing both, "
-        "colour = cluster"
+        f"Co-occurrence of the {len(freq)} most frequent keywords; size = articles, "
+        "links = articles that use both"
     )
     g = nx.Graph()
-    g.add_nodes_from(freq)
+    g.add_nodes_from(k for c in comms for k in c)
     for (a, b), cnt in pairs.items():
-        if cnt >= 2:
+        if cnt >= 2 and a in g and b in g:
             g.add_edge(a, b, weight=cnt / (freq[a] * freq[b]))
-    pos = nx.spring_layout(g, weight="weight", seed=7, k=1.6 / max(len(freq), 1) ** 0.5)
+    pos = cluster_layout(g, comms)
     group = {k: i for i, c in enumerate(comms) for k in c}
-    top = max(freq.values())
-    labelled = {k for c in comms for k in c[:4]}
-    for c in charts(title, sub, SOURCE, size=(9, 6.2)):
+    top = max(freq[k] for k in g)
+    labelled = {k for c in comms for k in c[:2]}
+    for c in charts(title, sub, SOURCE, size=(9, 5.6)):
         c.ax.grid(False)
         c.ax.set_xticks([])
         c.ax.set_yticks([])
         for side in ("left", "bottom"):
             c.ax.spines[side].set_visible(False)
+        c.ax.set_position([0.03, 0.12, 0.6, 0.7])
         for a, b in g.edges():
             (x0, y0), (x1, y1) = pos[a], pos[b]
-            c.ax.plot([x0, x1], [y0, y1], color=c.t["grid"], linewidth=0.6, zorder=1)
+            c.ax.plot([x0, x1], [y0, y1], color=c.t["grid"], linewidth=0.5, alpha=0.7, zorder=1)
         for k, (x, y) in pos.items():
-            col = c.color(min(group.get(k, 0), 5))
-            c.ax.scatter(x, y, s=30 + 500 * freq[k] / top, color=col, zorder=2, linewidths=0)
+            c.ax.scatter(
+                x, y, s=25 + 450 * freq[k] / top, color=c.color(group[k]), zorder=2, linewidths=0
+            )
             if k in labelled:
                 c.ax.annotate(
-                    short(k, 32),
+                    short(k, 28),
                     (x, y),
-                    xytext=(0, 7),
+                    xytext=(0, 8),
                     textcoords="offset points",
                     ha="center",
                     fontsize=7.5,
                     color=c.t["text"],
                     zorder=3,
                 )
-        c.fig.subplots_adjust(left=0.04, right=0.96, top=0.84, bottom=0.12)
+        y = 0.8
+        for i, comm in enumerate(comms):
+            c.fig.text(0.665, y, "\u25cf", color=c.color(i), fontsize=12, va="top")
+            words = textwrap.wrap(", ".join(comm[:5]), 38)
+            c.fig.text(0.69, y - 0.004, "\n".join(words), color=c.t["text"], fontsize=8, va="top")
+            y -= 0.035 * len(words) + 0.03
         c.save(fig, f"{name}-map")
     return title
 
@@ -311,7 +336,7 @@ are candidates for research gaps, to be read against the literature, not conclus
 
 
 def latest(topics: list[dict], today: date) -> dict:
-    metrics, parts = [], []
+    metrics = []
     for t in topics:
         g, label = t["growth"], t["cfg"]["label"]
         metrics.append(
@@ -335,10 +360,6 @@ def latest(topics: list[dict], today: date) -> dict:
                 "period": t["snap"]["fetched"],
             }
         )
-        parts.append(
-            f"{label}: {g['recent_avg']:.0f} articles a year in {g['recent_span']} "
-            f"({g['past_avg']:.0f} in {g['past_span']})"
-        )
     return {
         "schema": 1,
         "id": "literature-map",
@@ -349,9 +370,21 @@ def latest(topics: list[dict], today: date) -> dict:
         "frequency": "monthly",
         "updated": today.isoformat(),
         "source": "OpenAlex",
-        "headline": "; ".join(parts) + ".",
+        "headline": headline(topics),
         "metrics": metrics,
     }
+
+
+def headline(topics: list[dict]) -> str:
+    fastest = max(topics, key=lambda t: t["growth"]["recent_avg"] / max(t["growth"]["past_avg"], 1))
+    g = fastest["growth"]
+    total = sum(len(t["new"]) for t in topics)
+    new = f"{total} new articles since the last update" if total else "No new articles this month"
+    return (
+        f"{new}. The fastest-growing field is {fastest['cfg']['label']}: "
+        f"{g['recent_avg']:.0f} articles a year in {g['recent_span']}, against "
+        f"{g['past_avg']:.0f} in {g['past_span']}."
+    )
 
 
 def readme_block(topics: list[dict], today: date) -> str:
@@ -368,7 +401,7 @@ def readme_block(topics: list[dict], today: date) -> str:
             f"| {len(t['new'])} | {gap} |"
         )
     return (
-        f"**Latest reading: {today.isoformat()}.** "
+        f"**Latest reading: {today.isoformat()}.** {headline(topics)}"
         + "\n\n"
         + "\n".join(rows)
         + "\n\n*New: articles that were not in the previous monthly snapshot. Under-connected: the "
