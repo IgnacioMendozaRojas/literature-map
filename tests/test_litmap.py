@@ -141,6 +141,7 @@ def test_report_end_to_end(tmp_path):
             "query": "q",
             "stop": ["trade credit"],
             "events": {2008: "GFC"},
+            "focus": {"label": "Fintech", "pattern": "fintech"},
         }
     }
     out = report.main(tmp_path, cfg, today=date(2026, 11, 1))
@@ -148,7 +149,7 @@ def test_report_end_to_end(tmp_path):
     readme = (tmp_path / "README.md").read_text()
     assert "Latest reading: 2026-11-01" in readme and "old" not in readme
     page = (tmp_path / "docs" / "topics" / "tc.md").read_text()
-    assert "Under-connected themes" in page and "fintech" in page
+    assert "Under-connected themes" in page and "## Focus: Fintech" in page
     for k in ("trend", "map", "themes"):
         for mode in ("light", "dark"):
             assert (tmp_path / "docs" / "figures" / f"tc-{k}-{mode}.png").exists()
@@ -201,3 +202,17 @@ def test_gaps_skip_alternative_labels():
     assert {"board composition", "board structure"} not in [{r.a, r.b} for r in gp.itertuples()]
     assert an.tokens("labour costs") & an.tokens("labor share") == {"labor"}
     assert an.tokens("board independence") & an.tokens("independent directors")
+
+
+def test_dedupe_keeps_the_most_cited_record():
+    a = {"id": "W1", "title": "Robots at Work", "cited": 5}
+    b = {"id": "W2", "title": "Robots at work.", "cited": 50}
+    assert [w["id"] for w in an.dedupe([a, b])] == ["W2"]
+
+
+def test_focus_matches_titles_and_keywords():
+    works = synthetic()
+    works[0]["title"] = "Robots and the fall of cost stickiness"
+    works[1]["keywords"] = ["asymmetric cost behavior"]
+    f = an.focus(works, "stick|asymmetric cost")
+    assert set(f["id"]) == {"W0", "W1"}

@@ -151,7 +151,7 @@ def fig_themes(name: str, cfg: dict, th: pd.DataFrame, split: int, fig: Path) ->
 
 
 def analyse(name: str, cfg: dict, snap: dict, fig: Path) -> dict:
-    works = snap["works"]
+    works = an.dedupe(snap["works"])
     year = date.fromisoformat(snap["fetched"]).year
     per_year = an.full_years(works, year)
     g = an.growth(per_year)
@@ -178,6 +178,8 @@ def analyse(name: str, cfg: dict, snap: dict, fig: Path) -> dict:
         "split": split,
         "top_cited": an.top_cited(works),
         "rising": an.rising(works, year),
+        "focus": an.focus(works, cfg["focus"]["pattern"]) if cfg.get("focus") else None,
+        "n_works": len(works),
         "journals": an.counts(works, "journal"),
         "authors": an.counts(works, "authors"),
         "foundations": an.foundations(works, snap.get("foundations", [])),
@@ -204,6 +206,29 @@ def table(df: pd.DataFrame, cols: dict) -> str:
             cells.append(str(v))
         rows.append("| " + " | ".join(cells) + " |")
     return head + "\n".join(rows)
+
+
+def focus_text(t: dict) -> str:
+    f, label = t["focus"], t["cfg"].get("focus", {}).get("label", "")
+    if f is None or f.empty:
+        return ""
+    first = int(f["year"].min())
+    pool = sum(1 for w in t["snap"]["works"] if (w["year"] or 0) >= first)
+    return (
+        f"{label}: {len(f)} of {t['n_works']:,} articles, all published since {first} "
+        f"({len(f) / max(pool, 1):.0%} of the field's output in those years)"
+    )
+
+
+def focus_section(t: dict) -> str:
+    if t["focus"] is None:
+        return ""
+    cols = {"first_author": "First author", "year": "Year", "title": "Title", "journal": "Journal"}
+    return (
+        f"## Focus: {t['cfg']['focus']['label']}\n\n{focus_text(t) or '_No articles yet._'}. "
+        f"Pattern on titles and keywords: `{t['cfg']['focus']['pattern']}`.\n\n"
+        + table(t["focus"].head(15), cols)
+    )
 
 
 def page(t: dict) -> str:
@@ -244,6 +269,8 @@ def page(t: dict) -> str:
 {g["recent_span"]}.{bench_line}
 
 {picture(f"{fig}/{name}-trend-light.png", t["titles"]["trend"])}
+
+{focus_section(t)}
 
 ## Themes and clusters
 

@@ -18,6 +18,9 @@ trade-credit-smes:
     - small business
     - small firms
   events: {2008: Global financial crisis, 2020: COVID-19}
+  focus:
+    label: Trade credit through a risk lens
+    pattern: "risk management|credit risk|counterparty|default risk|liquidity risk"
   scopus_benchmark: 146  # articles found in Scopus with the narrower query of the original review
 
 ownership-and-boards:
@@ -31,6 +34,9 @@ ownership-and-boards:
   fields: [14, 18, 20]
   stop: [board of directors, ownership structure, corporate governance, ownership concentration]
   events: {2002: Sarbanes-Oxley, 2008: Global financial crisis}
+  focus:
+    label: Ownership heterogeneity and owner identity
+    pattern: "owner identity|ownership identity|types? of owners|owner types?|multiple large shareholders|ownership constellation|heterogene"
 
 ai-and-labour-costs:
   label: AI, automation and labour costs
@@ -42,3 +48,6 @@ ai-and-labour-costs:
   fields: [14, 18, 20]
   stop: [artificial intelligence, automation, labor costs, labour costs]
   events: {2012: Deep learning breakthrough, 2022: ChatGPT}
+  focus:
+    label: Technology and cost stickiness
+    pattern: "stick|asymmetric cost|cost asymmetr|cost behavio"

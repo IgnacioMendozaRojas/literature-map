@@ -36,6 +36,36 @@ def growth(per_year: pd.Series, window: int = 5) -> dict:
     }
 
 
+def dedupe(works: list[dict]) -> list[dict]:
+    """OpenAlex sometimes holds one article twice (preprint and version of record, or two
+    records of one DOI): keep the most cited record of each title."""
+    best: dict[str, dict] = {}
+    for w in works:
+        key = re.sub(r"[^a-z0-9]", "", w["title"].lower())[:80] or w["id"]
+        if key not in best or w["cited"] > best[key]["cited"]:
+            best[key] = w
+    return list(best.values())
+
+
+def focus(works: list[dict], pattern: str) -> pd.DataFrame:
+    """Works whose title or keywords match a pattern: a strand of the field to follow."""
+    rx = re.compile(pattern, re.IGNORECASE)
+    rows = [
+        {
+            "id": w["id"],
+            "first_author": w["authors"][0] if w["authors"] else "",
+            "year": w["year"],
+            "title": w["title"],
+            "journal": w["journal"],
+            "cited": w["cited"],
+        }
+        for w in works
+        if rx.search(w["title"]) or any(rx.search(k) for k in w["keywords"])
+    ]
+    df = pd.DataFrame(rows, columns=["id", "first_author", "year", "title", "journal", "cited"])
+    return df.sort_values(["year", "cited"], ascending=False).reset_index(drop=True)
+
+
 def top_cited(works: list[dict], n: int = 10) -> pd.DataFrame:
     df = pd.DataFrame(works)
     df["first_author"] = df["authors"].map(lambda a: a[0] if a else "")
