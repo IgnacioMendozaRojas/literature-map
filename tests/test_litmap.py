@@ -152,3 +152,35 @@ def test_report_end_to_end(tmp_path):
     for k in ("trend", "map", "themes"):
         for mode in ("light", "dark"):
             assert (tmp_path / "docs" / "figures" / f"tc-{k}-{mode}.png").exists()
+
+
+class FakeSession:
+    """Serves 250 works in pages of 100, by page number or cursor."""
+
+    def __init__(self):
+        self.headers, self.seen = {}, []
+
+    def get(self, url, params, timeout):
+        self.seen.append(params)
+        i = params.get("page", 1) - 1 if "page" in params else int(params["cursor"].strip("*") or 0)
+        works = [
+            {"id": f"https://openalex.org/W{k}"} for k in range(i * 100, min(250, i * 100 + 100))
+        ]
+        nxt = str(i + 1) if works else None
+
+        class R:
+            status_code = 200
+
+            def json(self):
+                return {"meta": {"count": 250, "next_cursor": nxt}, "results": works}
+
+        return R()
+
+
+@pytest.mark.parametrize("key", ["", "k"])
+def test_paging_with_and_without_key(monkeypatch, key):
+    monkeypatch.setenv("OPENALEX_API_KEY", key)
+    c = oa.Client(pause=0, session=FakeSession())
+    count, works = c.works("f", limit=6000)
+    assert count == 250 and len(works) == 250 and works[-1]["id"] == "W249"
+    assert ("cursor" in c.s.seen[0]) == bool(key) and c.calls == 3

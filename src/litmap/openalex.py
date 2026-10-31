@@ -92,15 +92,18 @@ class Client:
         return {}
 
     def works(self, flt: str, limit: int) -> tuple[int, list[dict]]:
-        """All works matching the filter (cursor paging), up to 'limit'."""
-        out, cursor, count = [], "*", 0
-        while cursor and len(out) < limit:
-            page = self.get(
-                {"filter": flt, "select": ",".join(FIELDS), "per-page": 100, "cursor": cursor}
-            )
+        """All works matching the filter, up to 'limit'. With an API key, cursor paging; without
+        one, numbered pages (OpenAlex allows cursor paging only with a free key)."""
+        base = {"filter": flt, "select": ",".join(FIELDS), "per-page": 100}
+        out, count, cursor, n = [], 0, "*", 1
+        while len(out) < limit:
+            step = {"cursor": cursor} if self.key else {"page": n}
+            page = self.get({**base, **step})
             count = page["meta"]["count"]
             out += [compact(w) for w in page["results"]]
-            cursor = page["meta"].get("next_cursor") if page["results"] else None
+            cursor, n = page["meta"].get("next_cursor"), n + 1
+            if not page["results"] or (self.key and not cursor) or len(out) >= count:
+                break
         return count, out[:limit]
 
     def titles(self, ids: list[str]) -> list[dict]:

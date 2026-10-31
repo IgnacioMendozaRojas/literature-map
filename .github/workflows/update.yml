@@ -2,7 +2,7 @@ name: Monthly update
 
 # Downloads each field from OpenAlex (open metadata, no key needed; an optional
 # OPENALEX_API_KEY secret is used if present), then rebuilds the topic pages, figures,
-# latest.json and the README block. Runs on the 3rd of every month (05:41 UTC).
+# latest.json and the README block. Runs on the 3rd of every month (05:41 UTC). Add the free key as a repository secret for cursor paging.
 on:
   schedule:
     - cron: "41 5 3 * *"
