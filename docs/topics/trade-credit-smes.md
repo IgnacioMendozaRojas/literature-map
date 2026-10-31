@@ -6,7 +6,7 @@
 **Query** (title and abstract, journal articles since 1990):
 `"trade credit" AND (SME OR SMEs OR "small and medium" OR "small business" OR "small firms")`
 
-**Coverage.** 443 articles; 35% of them published in
+**Coverage.** 440 articles; 35% of them published in
 2021-2025. The original review found 146 articles in Scopus with a narrower query (articles with both terms in title, abstract or keywords).
 
 <picture>
@@ -19,14 +19,13 @@
 Keyword communities found by modularity on the co-occurrence network (the method behind
 VOSviewer's clustering), largest first:
 
-1. firm size, financial constraints, accounts payable, information asymmetry, accounts receivable, financial crisis, supplier financing, 2008 financial crisis
-2. bank lending, sme financing, access to credit, external financing, supply chain finance, small business financing, informal finance, trade credit financing
+1. bank lending, sme financing, financial constraints, access to credit, access to finance, external financing, supply chain finance, informal finance
+2. firm size, accounts payable, accounts receivable, information asymmetry, financial crisis, supplier financing, 2008 financial crisis, working capital management
 3. firm age, profitability, financial performance, capital structure, debt financing, equity financing, short-term debt, retained earnings
-4. access to finance, working capital management, micro, small and medium enterprises, trade credit management
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../figures/trade-credit-smes-map-dark.png">
-  <img alt="Trade credit and SMEs: 4 clusters of themes, the largest around firm size" src="../figures/trade-credit-smes-map-light.png">
+  <img alt="Trade credit and SMEs: the literature splits into 3 clusters of themes" src="../figures/trade-credit-smes-map-light.png">
 </picture>
 
 <picture>
@@ -42,7 +41,7 @@ are candidates for research gaps, to be read against the literature, not conclus
 - **sme financing** and **accounts receivable**: 0 articles together, 6 expected if unrelated
 - **firm size** and **information asymmetry**: 0 articles together, 5 expected if unrelated
 - **bank lending** and **working capital management**: 0 articles together, 4 expected if unrelated
-- **information asymmetry** and **accounts receivable**: 0 articles together, 3 expected if unrelated
+- **accounts receivable** and **information asymmetry**: 0 articles together, 3 expected if unrelated
 - **firm size** and **supply chain finance**: 1 articles together, 3 expected if unrelated
 - **bank lending** and **financial performance**: 2 articles together, 5 expected if unrelated
 
@@ -53,10 +52,10 @@ are candidates for research gaps, to be read against the literature, not conclus
 | Mitchell A. Petersen | 1997 | [Trade Credit: Theories and Evidence](https://openalex.org/W3021995853) | 151 | 34% |
 | Vicente Cuñat | 2006 | [Trade Credit: Suppliers as Debt Collectors and Insurance Providers](https://openalex.org/W3124863821) | 89 | 20% |
 | Bruno Biais | 1997 | [Trade Credit and Credit Rationing](https://openalex.org/W2024365411) | 88 | 20% |
-| Raymond J. Fisman | 2003 | [Trade Credit, Financial Intermediary Development, and Industry Growth](https://openalex.org/W3124834107) | 77 | 17% |
-| Chee K. Ng | 1999 | [Evidence on the Determinants of Credit Terms Used in Interfirm Trade](https://openalex.org/W2164367837) | 77 | 17% |
+| Raymond J. Fisman | 2003 | [Trade Credit, Financial Intermediary Development, and Industry Growth](https://openalex.org/W3124834107) | 77 | 18% |
+| Chee K. Ng | 1999 | [Evidence on the Determinants of Credit Terms Used in Interfirm Trade](https://openalex.org/W2164367837) | 77 | 18% |
 | J. Stephen Ferris | 1981 | [A Transactions Theory of Trade Credit Use](https://openalex.org/W2013704297) | 74 | 17% |
-| Mike C. Burkart | 2004 | [In-Kind Finance: A Theory of Trade Credit](https://openalex.org/W2605496294) | 73 | 16% |
+| Mike C. Burkart | 2004 | [In-Kind Finance: A Theory of Trade Credit](https://openalex.org/W2605496294) | 73 | 17% |
 | Janet Kiholm Smith | 1987 | [Trade Credit and Informational Asymmetry](https://openalex.org/W2023128559) | 72 | 16% |
 | Allen N. Berger | 1998 | [The economics of small business finance: The roles of private equity and debt markets in…](https://openalex.org/W2119780569) | 69 | 16% |
 | Jeffrey H. Nilsen | 2002 | [Trade Credit and the Bank Lending Channel](https://openalex.org/W3122858800) | 68 | 15% |
@@ -110,8 +109,8 @@ are candidates for research gaps, to be read against the literature, not conclus
 | Darush Yazdanfar | 13 |
 | Pedro J. García‐Teruel | 7 |
 | Pedro Martínez Solano | 6 |
-| Filippo di Pietro | 6 |
 | María-José Palacín-Sánchez | 6 |
+| Filippo di Pietro | 6 |
 | W. Otto | 6 |
 | Daisuke Tsuruta | 6 |
 | Susan Coleman | 6 |

@@ -6,12 +6,12 @@
 **Query** (title and abstract, journal articles since 1990):
 `("artificial intelligence" OR automation OR robots OR "digital technologies") AND ("labor cost" OR "labour cost" OR "labor costs" OR "labour costs" OR "cost stickiness" OR "sticky costs" OR "cost behavior" OR "cost behaviour" OR "labor share" OR "labour share")`
 
-**Coverage.** 2,464 articles; 66% of them published in
+**Coverage.** 510 articles; 72% of them published in
 2021-2025.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../figures/ai-and-labour-costs-trend-dark.png">
-  <img alt="AI, automation and labour costs: output rose from 29 to 273 articles a year" src="../figures/ai-and-labour-costs-trend-light.png">
+  <img alt="AI, automation and labour costs: output rose from 5 to 57 articles a year" src="../figures/ai-and-labour-costs-trend-light.png">
 </picture>
 
 ## Themes and clusters
@@ -19,19 +19,19 @@
 Keyword communities found by modularity on the co-occurrence network (the method behind
 VOSviewer's clustering), largest first:
 
-1. labor cost reduction, machine learning, industrial automation, labor shortage, warehouse automation, object detection, machine vision, computer vision
-2. agricultural robotics, precision agriculture, agricultural automation, sustainable agriculture, smart agriculture, artificial intelligence in agriculture, unmanned aerial vehicles, food security
-3. internet of things, digital transformation, labor productivity, industry 4.0, digital twin, digitalization, digital technologies, production efficiency
-4. labor share, industrial robots, job displacement, productivity, china, artificial intelligence adoption, technological change
+1. digital transformation, industrial robots, labor productivity, china, robot adoption, artificial intelligence adoption, manufacturing companies, total factor productivity
+2. labor share, job displacement, technological change, productivity, income inequality, labor market, economic growth, wages
+3. labor cost reduction, digitalization, big data, digital technologies, internet of things, machine learning, enterprise resource planning, digital economy
+4. population aging, income distribution, robots, wage share, technological progress, capital-labor substitution
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../figures/ai-and-labour-costs-map-dark.png">
-  <img alt="AI, automation and labour costs: 4 clusters of themes, the largest around labor cost reduction" src="../figures/ai-and-labour-costs-map-light.png">
+  <img alt="AI, automation and labour costs: the literature splits into 4 clusters of themes" src="../figures/ai-and-labour-costs-map-light.png">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../figures/ai-and-labour-costs-themes-dark.png">
-  <img alt="AI, automation and labour costs: since 2021, the rising themes are precision agriculture and internet of things" src="../figures/ai-and-labour-costs-themes-light.png">
+  <img alt="AI, automation and labour costs: since 2021, the rising themes are digital transformation and artificial intelligence adoption" src="../figures/ai-and-labour-costs-themes-light.png">
 </picture>
 
 ## Under-connected themes
@@ -39,27 +39,27 @@ VOSviewer's clustering), largest first:
 Pairs of frequent keywords that appear together far less often than chance would predict. They
 are candidates for research gaps, to be read against the literature, not conclusions.
 
-- **labor cost reduction** and **labor share**: 0 articles together, 12 expected if unrelated
-- **agricultural robotics** and **labor share**: 0 articles together, 4 expected if unrelated
-- **precision agriculture** and **labor share**: 0 articles together, 4 expected if unrelated
-- **agricultural robotics** and **industrial robots**: 0 articles together, 3 expected if unrelated
-- **precision agriculture** and **industrial robots**: 0 articles together, 3 expected if unrelated
-- **internet of things** and **labor share**: 1 articles together, 4 expected if unrelated
+- **labor share** and **digital transformation**: 1 articles together, 6 expected if unrelated
+- **digital transformation** and **industrial robots**: 1 articles together, 3 expected if unrelated
+- **labor cost reduction** and **industrial robots**: 2 articles together, 3 expected if unrelated
+- **labor share** and **digitalization**: 2 articles together, 3 expected if unrelated
+- **labor share** and **china**: 3 articles together, 3 expected if unrelated
+- **labor share** and **artificial intelligence adoption**: 3 articles together, 3 expected if unrelated
 
 ## Foundations: the works this field cites most
 
 | First author | Year | Title | Cited by articles here | Share |
 |---|---|---|---|---|
-| Daron Acemoğlu | 2019 | [Robots and Jobs: Evidence from US Labor Markets](https://openalex.org/W3021644002) | 74 | 3% |
-| Georg Graetz | 2018 | [Robots at Work](https://openalex.org/W3122245868) | 69 | 3% |
-| Daron Acemoğlu | 2018 | [The Race between Man and Machine: Implications of Technology for Growth, Factor Shares, a…](https://openalex.org/W3125498346) | 65 | 3% |
-| Loukas Karabarbounis | 2013 | [The Global Decline of the Labor Share*](https://openalex.org/W2155379226) | 48 | 2% |
-| Daron Acemoğlu | 2019 | [Automation and New Tasks: How Technology Displaces and Reinstates Labor](https://openalex.org/W2922903482) | 44 | 2% |
-| David Autor | 2003 | [The Skill Content of Recent Technological Change: An Empirical Exploration](https://openalex.org/W2892380133) | 40 | 2% |
-| Carl Benedikt Frey | 2016 | [The future of employment: How susceptible are jobs to computerisation?](https://openalex.org/W2526781987) | 39 | 2% |
-| Daron Acemoğlu | 2011 | [Skills, Tasks and Technologies: Implications for Employment and Earnings](https://openalex.org/W3124124240) | 38 | 2% |
-| Joseph Redmon | 2016 | [You Only Look Once: Unified, Real-Time Object Detection](https://openalex.org/W1483870316) | 36 | 1% |
-| David Autor | 2013 | [The Growth of Low-Skill Service Jobs and the Polarization of the US Labor Market](https://openalex.org/W3124401164) | 31 | 1% |
+| Daron Acemoğlu | 2019 | [Robots and Jobs: Evidence from US Labor Markets](https://openalex.org/W3021644002) | 73 | 14% |
+| Georg Graetz | 2018 | [Robots at Work](https://openalex.org/W3122245868) | 68 | 13% |
+| Daron Acemoğlu | 2018 | [The Race between Man and Machine: Implications of Technology for Growth, Factor Shares, a…](https://openalex.org/W3125498346) | 63 | 12% |
+| Loukas Karabarbounis | 2013 | [The Global Decline of the Labor Share*](https://openalex.org/W2155379226) | 47 | 9% |
+| Daron Acemoğlu | 2019 | [Automation and New Tasks: How Technology Displaces and Reinstates Labor](https://openalex.org/W2922903482) | 42 | 8% |
+| David Autor | 2003 | [The Skill Content of Recent Technological Change: An Empirical Exploration](https://openalex.org/W2892380133) | 39 | 8% |
+| Daron Acemoğlu | 2011 | [Skills, Tasks and Technologies: Implications for Employment and Earnings](https://openalex.org/W3124124240) | 38 | 7% |
+| Carl Benedikt Frey | 2016 | [The future of employment: How susceptible are jobs to computerisation?](https://openalex.org/W2526781987) | 37 | 7% |
+| David Autor | 2013 | [The Growth of Low-Skill Service Jobs and the Polarization of the US Labor Market](https://openalex.org/W3124401164) | 31 | 6% |
+| Daron Acemoğlu | 2020 | [Competing with Robots: Firm-Level Evidence from France](https://openalex.org/W3005100205) | 29 | 6% |
 
 ## Most cited articles
 
@@ -67,55 +67,55 @@ are candidates for research gaps, to be read against the literature, not conclus
 |---|---|---|---|---|
 | Daron Acemoğlu | 2018 | [The Race between Man and Machine: Implications of Technology for Growth, Factor Shares, a…](https://openalex.org/W3125498346) | American Economic Review | 3121 |
 | Daron Acemoğlu | 2019 | [Automation and New Tasks: How Technology Displaces and Reinstates Labor](https://openalex.org/W2922903482) | The Journal of Economic Perspectives | 2617 |
-| Jung-Myung Lee | 2010 | [Current status of vegetable grafting: Diffusion, grafting techniques, automation](https://openalex.org/W2001405200) | Scientia Horticulturae | 839 |
 | Daron Acemoğlu | 2019 | [The wrong kind of AI? Artificial intelligence and the future of labour demand](https://openalex.org/W4230775373) | Cambridge Journal of Regions Economy and Society | 634 |
 | Daron Acemoğlu | 2021 | [Demographics and Automation](https://openalex.org/W3169161674) | The Review of Economic Studies | 584 |
-| Fumio Narita | 2017 | [A Review on Piezoelectric, Magnetostrictive, and Magnetoelectric Materials and Device Tec…](https://openalex.org/W2769793540) | Advanced Engineering Materials | 529 |
 | Jay Dixon | 2021 | [The Robot Revolution: Managerial and Employment Consequences for Firms](https://openalex.org/W3144307509) | Management Science | 463 |
 | Daron Acemoğlu | 2020 | [Competing with Robots: Firm-Level Evidence from France](https://openalex.org/W3005100205) | AEA Papers and Proceedings | 456 |
 | Michael Koch | 2021 | [Robots and Firms](https://openalex.org/W3126711410) | The Economic Journal | 452 |
-| Kushagra Sharma | 2024 | [Integrating artificial intelligence and Internet of Things (IoT) for enhanced crop monito…](https://openalex.org/W4401284205) | Sensors International | 389 |
+| David Autor | 2018 | [Is Automation Labor Share-Displacing? Productivity Growth, Employment, and the Labor Share](https://openalex.org/W2800390578) | Brookings Papers on Economic Activity | 384 |
+| Carl Benedikt Frey | 2019 | [The Technology Trap: Capital, Labor, and Power in the Age of Automation](https://openalex.org/W2951733402) | Project Muse (Johns Hopkins University) | 303 |
+| Svenja Mohr | 2021 | [Acceptance of artificial intelligence in German agriculture: an application of the techno…](https://openalex.org/W3166769082) | Precision Agriculture | 277 |
 
 ## Rising: recent articles with the most citations per year
 
 | First author | Year | Title | Journal | Citations a year |
 |---|---|---|---|---|
-| Kushagra Sharma | 2024 | [Integrating artificial intelligence and Internet of Things (IoT) for enhanced crop monito…](https://openalex.org/W4401284205) | Sensors International | 129.7 |
-| Tantan Jin | 2024 | [Robotic arms in precision agriculture: A comprehensive review of the technologies, applic…](https://openalex.org/W4394946636) | Computers and Electronics in Agriculture | 52.7 |
-| Yuanyuan Qiao | 2023 | [Survey of Deep Learning for Autonomous Surface Vehicles in Marine Environments](https://openalex.org/W4319996475) | IEEE Transactions on Intelligent Transportation Systems | 47.0 |
-| Xiaoqing Han | 2024 | [A dual population collaborative genetic algorithm for solving flexible job shop schedulin…](https://openalex.org/W4392672995) | Swarm and Evolutionary Computation | 43.3 |
-| Mrutyunjay Padhiary | 2025 | [Emerging technologies for smart and sustainable precision agriculture](https://openalex.org/W4412196267) | Discover Robotics | 34.0 |
-| Wenbai Chen | 2023 | [MTD-YOLO: Multi-task deep convolutional neural network for cherry tomato fruit bunch matu…](https://openalex.org/W4389636119) | Computers and Electronics in Agriculture | 32.8 |
-| Ruiqi Wang | 2025 | [Can LLMs Replace Human Evaluators? An Empirical Study of LLM-as-a-Judge in Software Engin…](https://openalex.org/W4411522868) | Proceedings of the ACM on software engineering. | 31.0 |
 | Emin Dinlersoz | 2023 | [Automation, labor share, and productivity: plant-level evidence from U.S. manufacturing](https://openalex.org/W2892262206) | Economics of Innovation and New Technology | 28.0 |
+| Daron Acemoğlu | 2025 | [Power and Progress: Our Thousand-Year Struggle over Technology and Prosperity](https://openalex.org/W4407713486) | Perspectives on Science and Christian Faith | 20.0 |
+| Antonio Minniti | 2025 | [AI innovation and the labor share in European regions](https://openalex.org/W4410421805) | European Economic Review | 19.0 |
+| Wenbing Luo | 2024 | [The impact of enterprise digital transformation on risk-taking: Evidence from China](https://openalex.org/W4392005796) | Research in International Business and Finance | 18.7 |
+| Guimin Qu | 2025 | [Is new technology always good? Artificial intelligence and corporate tax avoidance: Evide…](https://openalex.org/W4407315828) | International Review of Economics & Finance | 17.0 |
+| Joel Stiebale | 2024 | [Robots and the rise of European superstar firms](https://openalex.org/W3049047383) | International Journal of Industrial Organization | 13.3 |
+| Senlin Lin | 2023 | [Artificial Intelligence in Community-Based Diabetic Retinopathy Telemedicine Screening in…](https://openalex.org/W4321612624) | JMIR Public Health and Surveillance | 13.0 |
+| Hongcheng Ling | 2025 | [Digital innovation, human capital allocation, and labour share: Empirical evidence from l…](https://openalex.org/W4410004311) | Journal of Innovation & Knowledge | 12.0 |
 
 ## Journals and authors
 
 | Journal | Articles |
 |---|---|
-| Zenodo (CERN European Organization for Nuclear Research) | 59 |
-| Computers and Electronics in Agriculture | 24 |
-| EKONOMIKA I UPRAVLENIE PROBLEMY RESHENIYA | 23 |
-| International Journal for Research in Applied Science and Engineering Technology | 23 |
-| DOAJ (DOAJ: Directory of Open Access Journals) | 19 |
-| Applied Sciences | 18 |
-| INTERANTIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT | 16 |
-| Sustainability | 14 |
-| Agriculture | 13 |
-| Smart Agricultural Technology | 13 |
+| Zenodo (CERN European Organization for Nuclear Research) | 15 |
+| EKONOMIKA I UPRAVLENIE PROBLEMY RESHENIYA | 11 |
+| RePEc: Research Papers in Economics | 7 |
+| Economic Modelling | 7 |
+| Economics of Innovation and New Technology | 5 |
+| Sustainability | 5 |
+| Advances in Economics Management and Political Sciences | 5 |
+| Economic Analysis and Policy | 4 |
+| World Economy | 4 |
+| Systems | 3 |
 
 | Author | Articles |
 |---|---|
 | Pascual Restrepo | 11 |
 | Daron Acemoğlu | 10 |
-| Francisco J. G. Silva | 6 |
-| Duc Truong Pham | 6 |
-| Xin Zhang | 5 |
-| Qin Zhang | 5 |
-| R.D.S.G. Campilho | 5 |
-| Zhao Zhang | 5 |
-| Manoj Karkee | 5 |
-| Yuzhen Lu | 5 |
+| Klaus Prettner A | 3 |
+| Andrea Manera | 3 |
+| Цинделиани Имеда Анатольевич | 3 |
+| Zheng Liu | 2 |
+| Emin Dinlersoz | 2 |
+| Andreas Irmen | 2 |
+| Michael Koch | 2 |
+| Ilya Manuylov | 2 |
 
 ## New since the last update (first run)
 

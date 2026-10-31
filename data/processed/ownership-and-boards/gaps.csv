@@ -1,7 +1,7 @@
 a,b,observed,expected,ratio
-board composition,board structure,9,37.8296869740828,0.23790839205637415
-board structure,board gender diversity,5,16.79434533826994,0.2977192560525894
-board independence,board composition,74,182.09289801413667,0.40638597554889294
-audit committee,board gender diversity,7,15.927970380343318,0.4394784666751194
-family ownership,leverage,15,33.60484685291148,0.44636418269230765
-board independence,board structure,49,102.88657017839111,0.47625263350737385
+firm performance,earnings management,10,31.570543702684102,0.31675095919079177
+board composition,earnings management,11,28.40055058499656,0.3873164348373964
+family ownership,leverage,13,32.69236063317275,0.3976464148877942
+state ownership,earnings management,6,13.973847212663454,0.42937352245862886
+audit committee,state ownership,8,17.615966964900206,0.45413345835286767
+board independence,independent directors,136,276.53097040605644,0.49180748109442646
