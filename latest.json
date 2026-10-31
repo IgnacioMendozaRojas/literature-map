@@ -8,16 +8,16 @@
   "frequency": "monthly",
   "updated": "2026-10-31",
   "source": "OpenAlex",
-  "headline": "10 new articles since the last update. The fastest-growing field is AI, automation and labour costs: 56 articles a year in 2021-2025, against 5 in 2011-2015.",
+  "headline": "6 new articles since the last update. The fastest-growing field is AI, automation and labour costs: 56 articles a year in 2021-2025, against 5 in 2011-2015.",
   "metrics": [
     {
       "id": "trade-credit-smes_per_year",
       "label": "Trade credit and SMEs: articles a year",
-      "value": 28.6,
+      "value": 28.8,
       "unit": "articles",
       "period": "2021-2025",
       "previous": 15.4,
-      "change": 13.2,
+      "change": 13.4,
       "change_type": "absolute"
     },
     {
@@ -30,17 +30,17 @@
     {
       "id": "ownership-and-boards_per_year",
       "label": "Ownership and boards: articles a year",
-      "value": 177.4,
+      "value": 177.2,
       "unit": "articles",
       "period": "2021-2025",
       "previous": 108.4,
-      "change": 69.0,
+      "change": 68.8,
       "change_type": "absolute"
     },
     {
       "id": "ownership-and-boards_new",
       "label": "Ownership and boards: new articles since the last update",
-      "value": 10,
+      "value": 6,
       "unit": "articles",
       "period": "2026-10-31"
     },

@@ -42,7 +42,7 @@ Keyword communities found by modularity on the co-occurrence network (the method
 VOSviewer's clustering), largest first:
 
 1. digital transformation, industrial robots, labor productivity, china, robot adoption, artificial intelligence adoption, manufacturing companies, total factor productivity
-2. labor share, job displacement, technological change, productivity, income inequality, economic growth, labor market, wages
+2. labor share, job displacement, technological change, productivity, income inequality, labor market, economic growth, wages
 3. labor cost reduction, digitalization, big data, digital technologies, internet of things, enterprise resource planning, machine learning, digital economy
 4. population aging, income distribution, wage share, robots, capital-labor substitution, technological progress
 
@@ -61,12 +61,12 @@ VOSviewer's clustering), largest first:
 Pairs of frequent keywords that appear together far less often than chance would predict. They
 are candidates for research gaps, to be read against the literature, not conclusions.
 
-- **labor share** and **digital transformation**: 1 articles together, 6 expected if unrelated
-- **digital transformation** and **industrial robots**: 1 articles together, 3 expected if unrelated
+- **labor share** and **digital transformation**: 1 article together, 6 expected if unrelated
+- **digital transformation** and **industrial robots**: 1 article together, 3 expected if unrelated
 - **labor cost reduction** and **industrial robots**: 2 articles together, 3 expected if unrelated
 - **labor share** and **digitalization**: 2 articles together, 3 expected if unrelated
-- **labor share** and **china**: 3 articles together, 3 expected if unrelated
 - **labor share** and **artificial intelligence adoption**: 3 articles together, 3 expected if unrelated
+- **labor share** and **industrial robots**: 5 articles together, 5 expected if unrelated
 
 ## Foundations: the works this field cites most
 
@@ -135,8 +135,8 @@ are candidates for research gaps, to be read against the literature, not conclus
 | Zheng Liu | 2 |
 | Emin Dinlersoz | 2 |
 | Andreas Irmen | 2 |
-| Michael Koch | 2 |
 | Ilya Manuylov | 2 |
+| Michael Koch | 2 |
 | Maarten Goos | 2 |
 
 ## New since the last update (2026-10-31)

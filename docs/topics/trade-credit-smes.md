@@ -16,7 +16,7 @@
 
 ## Focus: Trade credit through a risk lens
 
-Trade credit through a risk lens: 32 of 422 articles, all published since 1995 (7% of the field's output in those years). Pattern on titles and keywords: `risk management|credit risk|counterparty|default risk|liquidity risk`.
+Trade credit through a risk lens: 32 of 422 articles, all published since 1995 (8% of the field's output in those years). Pattern on titles and keywords: `risk management|credit risk|counterparty|default risk|liquidity risk`.
 
 | First author | Year | Title | Journal |
 |---|---|---|---|
@@ -64,7 +64,7 @@ are candidates for research gaps, to be read against the literature, not conclus
 - **sme financing** and **accounts receivable**: 0 articles together, 5 expected if unrelated
 - **firm size** and **information asymmetry**: 0 articles together, 4 expected if unrelated
 - **bank lending** and **working capital management**: 0 articles together, 4 expected if unrelated
-- **sme financing** and **accounts payable**: 1 articles together, 5 expected if unrelated
+- **sme financing** and **accounts payable**: 1 article together, 5 expected if unrelated
 - **bank lending** and **financial performance**: 2 articles together, 5 expected if unrelated
 - **bank lending** and **supply chain finance**: 2 articles together, 4 expected if unrelated
 
@@ -130,8 +130,8 @@ are candidates for research gaps, to be read against the literature, not conclus
 |---|---|
 | Pedro J. García‐Teruel | 7 |
 | Pedro Martínez Solano | 6 |
-| María-José Palacín-Sánchez | 6 |
 | Filippo di Pietro | 6 |
+| María-José Palacín-Sánchez | 6 |
 | W. Otto | 6 |
 | Daisuke Tsuruta | 6 |
 | Susan Coleman | 6 |

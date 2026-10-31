@@ -16,7 +16,7 @@
 
 ## Focus: Ownership heterogeneity and owner identity
 
-Ownership heterogeneity and owner identity: 26 of 2,737 articles, all published since 2008 (1% of the field's output in those years). Pattern on titles and keywords: `owner identity|ownership identity|types? of owners|owner types?|multiple large shareholders|ownership constellation|heterogene`.
+Ownership heterogeneity and owner identity: 26 of 2,738 articles, all published since 2008 (1% of the field's output in those years). Pattern on titles and keywords: `owner identity|ownership identity|types? of owners|owner types?|multiple large shareholders|ownership constellation|heterogene`.
 
 | First author | Year | Title | Journal |
 |---|---|---|---|
@@ -41,9 +41,9 @@ Ownership heterogeneity and owner identity: 26 of 2,737 articles, all published 
 Keyword communities found by modularity on the co-occurrence network (the method behind
 VOSviewer's clustering), largest first:
 
-1. board independence, board size, ceo duality, foreign ownership, emerging markets, state ownership, earnings management, board gender diversity
-2. independent directors, board composition, listed companies, family ownership, agency theory, board structure, family business, principal-agent problem
-3. institutional ownership, managerial ownership, firm size, audit committee, leverage, indonesia stock exchange, manufacturing companies, capital structure
+1. board independence, board size, ceo duality, emerging markets, foreign ownership, state ownership, board gender diversity, moderating effect
+2. independent directors, board composition, listed companies, family ownership, agency theory, board structure, earnings management, family business
+3. institutional ownership, managerial ownership, firm size, leverage, audit committee, indonesia stock exchange, manufacturing companies, capital structure
 4. firm performance, return on assets, financial performance, tobin's q, return on equity, firm value
 
 <picture>
@@ -61,24 +61,24 @@ VOSviewer's clustering), largest first:
 Pairs of frequent keywords that appear together far less often than chance would predict. They
 are candidates for research gaps, to be read against the literature, not conclusions.
 
-- **ceo duality** and **indonesia stock exchange**: 1 articles together, 33 expected if unrelated
-- **agency theory** and **indonesia stock exchange**: 6 articles together, 20 expected if unrelated
-- **emerging markets** and **indonesia stock exchange**: 5 articles together, 16 expected if unrelated
-- **board structure** and **indonesia stock exchange**: 5 articles together, 16 expected if unrelated
-- **family ownership** and **leverage**: 13 articles together, 30 expected if unrelated
-- **board composition** and **indonesia stock exchange**: 12 articles together, 27 expected if unrelated
+- **state ownership** and **family business**: 3 articles together, 12 expected if unrelated
+- **foreign ownership** and **family business**: 4 articles together, 14 expected if unrelated
+- **earnings management** and **financial performance**: 3 articles together, 10 expected if unrelated
+- **firm performance** and **earnings management**: 10 articles together, 29 expected if unrelated
+- **managerial ownership** and **family business**: 8 articles together, 23 expected if unrelated
+- **institutional ownership** and **family business**: 10 articles together, 26 expected if unrelated
 
 ## Foundations: the works this field cites most
 
 | First author | Year | Title | Cited by articles here | Share |
 |---|---|---|---|---|
-| Michael C. Jensen | 1976 | [Theory of the firm: Managerial behavior, agency costs and ownership structure](https://openalex.org/W2752617332) | 831 | 30% |
-| Eugene F. Fama | 1983 | [Separation of Ownership and Control](https://openalex.org/W3122859634) | 576 | 21% |
+| Michael C. Jensen | 1976 | [Theory of the firm: Managerial behavior, agency costs and ownership structure](https://openalex.org/W2752617332) | 829 | 30% |
+| Eugene F. Fama | 1983 | [Separation of Ownership and Control](https://openalex.org/W3122859634) | 577 | 21% |
 | Andrei Shleifer | 1997 | [A Survey of Corporate Governance](https://openalex.org/W3121693921) | 466 | 17% |
 | Michael C. Jensen | 1993 | [The Modern Industrial Revolution, Exit, and the Failure of Internal Control Systems](https://openalex.org/W3021889044) | 328 | 12% |
-| David Yermack | 1996 | [Higher market valuation of companies with a small board of directors](https://openalex.org/W2074132263) | 306 | 11% |
-| Rafael La Porta | 1999 | [Corporate Ownership Around the World](https://openalex.org/W3123091495) | 266 | 10% |
-| Andrei Shleifer | 1986 | [Large Shareholders and Corporate Control](https://openalex.org/W2135241016) | 258 | 9% |
+| David Yermack | 1996 | [Higher market valuation of companies with a small board of directors](https://openalex.org/W2074132263) | 308 | 11% |
+| Rafael La Porta | 1999 | [Corporate Ownership Around the World](https://openalex.org/W3123091495) | 267 | 10% |
+| Andrei Shleifer | 1986 | [Large Shareholders and Corporate Control](https://openalex.org/W2135241016) | 257 | 9% |
 | Randall Mørck | 1988 | [Management ownership and market valuation](https://openalex.org/W1606272114) | 234 | 9% |
 | Eugene F. Fama | 1980 | [Agency Problems and the Theory of the Firm](https://openalex.org/W2160184254) | 228 | 8% |
 | Harold Demsetz | 1985 | [The Structure of Corporate Ownership: Causes and Consequences](https://openalex.org/W1991795148) | 200 | 7% |
@@ -103,22 +103,22 @@ are candidates for research gaps, to be read against the literature, not conclus
 | First author | Year | Title | Journal | Citations a year |
 |---|---|---|---|---|
 | Bruno Buchetti | 2024 | [A literature review on corporate governance and ESG research: Emerging trends and future…](https://openalex.org/W4404202412) | International Review of Financial Analysis | 32.3 |
+| Fuxiu Jiang | 2024 | [Understanding corporate governance in China](https://openalex.org/W4401354569) | The British Accounting Review | 21.3 |
 | Waseem Akhter | 2023 | [Does corporate social responsibility mediate the relationship between corporate governanc…](https://openalex.org/W4385837895) | Corporate Social Responsibility and Environmental Management | 16.0 |
 | Subhas Mondal | 2024 | [Unveiling the moderating role of governance mechanism on the nexus between CSR and firm p…](https://openalex.org/W4402499120) | Corporate Social Responsibility and Environmental Management | 14.0 |
 | Asuman Erben Yavuz | 2024 | [The Impact of Corporate Governance on Sustainability Disclosures: A Comparison from the P…](https://openalex.org/W4402929122) | Sustainability | 13.7 |
 | Pei-Gi Shu | 2024 | [Board network and ESG performance: Evidence from China](https://openalex.org/W4399920157) | Corporate Social Responsibility and Environmental Management | 13.3 |
 | Shms Alduha Abualhassan | 2024 | [Does corporate governance moderate the impact of earnings management on capital structure…](https://openalex.org/W4396691807) | Discover Sustainability | 13.3 |
 | Arshad Hasan | 2023 | [Corporate governance and tax avoidance: evidence from an emerging market](https://openalex.org/W4362695657) | Applied Economics | 13.0 |
-| Ahmed Imran Hunjra | 2023 | [How do corporate governance and corporate social responsibility affect credit risk?](https://openalex.org/W4387504414) | Research in International Business and Finance | 12.8 |
 
 ## Journals and authors
 
 | Journal | Articles |
 |---|---|
-| Zenodo (CERN European Organization for Nuclear Research) | 68 |
+| Zenodo (CERN European Organization for Nuclear Research) | 69 |
 | Corporate Ownership and Control | 61 |
 | Corporate Governance | 51 |
-| RePEc: Research Papers in Economics | 45 |
+| RePEc: Research Papers in Economics | 46 |
 | DOAJ (DOAJ: Directory of Open Access Journals) | 45 |
 | Corporate Governance An International Review | 34 |
 | DJA (Diponegoro Journal of Accounting) | 23 |
@@ -143,13 +143,9 @@ are candidates for research gaps, to be read against the literature, not conclus
 
 | First author | Year | Title | Journal |
 |---|---|---|---|
-| Najah Attig | 2007 | [Family pyramidal holdings and board of directors](https://openalex.org/W2087968741) | International Journal of Business Governance and Ethics |
-| Nadhilwan Rashad Lambri | 2020 | [Pengaruh corporate governance terhadap firm performance pada perusahaan manufaktur yang t…](https://openalex.org/W3024901973) | SKRIPSI-2020 |
-| Emma García‐Meca | 2009 | [Corporate Governance and Earnings Management: A Meta‐Analysis](https://openalex.org/W2146237944) | Corporate Governance An International Review |
-| Shima Korbacheh | 2012 | [Offering a Model to describe the Relationship between Corporate Governance Factors and Re…](https://openalex.org/W2182304530) |  |
-| Widijaya Widijaya | 2022 | [KARAKTERISTIK DEWAN DIREKSI, KOMITE AUDIT, DAN KEPEMILIKAN TERHADAP KINERJA PERUSAHAAN](https://openalex.org/W4310542380) | Jurnal Ekonomi Pembangunan STIE Muhammadiyah Palopo |
-| Viet Quoc Pham | 2020 | [Effects of corporate governance on high growth rate: evidence from Vietnamese listed comp…](https://openalex.org/W2998281912) | Management Science Letters |
-| Afzalur Rashid | 2008 | [The influence of ownership structures and board practices on corporate social disclosures…](https://openalex.org/W2779675691) | University of Southern Queensland ePrints (University of Southern Queensland) |
-| Linda Azlinda Sahlan | 2025 | [Corporate Governance and Accounting Conservatism: Exploring the Linkages and Implications](https://openalex.org/W4406599771) | International Journal of Research and Innovation in Social Science |
-| Fabrizio Fratini | 2015 | [Corporate Governance and Performance: Evidence from Italian Companies](https://openalex.org/W2014777645) | Open Journal of Business and Management |
-| Affaf Asghar Butt | 2020 | [Role of discretionary earning management in corporate governance-value and corporate gove…](https://openalex.org/W3018002146) | Corporate Governance |
+| Fuxiu Jiang | 2024 | [Understanding corporate governance in China](https://openalex.org/W4401354569) | The British Accounting Review |
+| Jinliang Li | 2008 | [An Empirical Study of the Split-share Structure Reform and Corporate Governance](https://openalex.org/W2376753909) | China Industrial Economy |
+| Abdullah Abdullah | 2017 | [Dual-Class Firms: Evidence from IPOs of Chinese Firms Cross-Listed on US Exchanges](https://openalex.org/W2728407637) | Emerging Markets Finance and Trade |
+| Hong Feng | 2010 | [Managerial Power,Governance Structure and Compensation-Performance Sensitivity](https://openalex.org/W2377420214) | Yunnan Caijing Daxue xuebao |
+| David M. Reeb | 2010 | [Subordinate board structures](https://openalex.org/W2150713920) | Journal of Corporate Finance |
+| IYABO ESTHER OLUWAFEMI | 2026 | [CORPORATE GOVERNANCE MECHANISMS AND FINANCIAL PERFORMANCE OF NIGERIAN DEPOSIT MONEY BANKS…](https://openalex.org/W7166349371) | Journal of African Advancement and Sustainability Studies |
