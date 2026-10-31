@@ -180,6 +180,7 @@ def analyse(name: str, cfg: dict, snap: dict, fig: Path) -> dict:
         "rising": an.rising(works, year),
         "focus": an.focus(works, cfg["focus"]["pattern"]) if cfg.get("focus") else None,
         "n_works": len(works),
+        "works": works,
         "journals": an.counts(works, "journal"),
         "authors": an.counts(works, "authors"),
         "foundations": an.foundations(works, snap.get("foundations", [])),
@@ -213,7 +214,7 @@ def focus_text(t: dict) -> str:
     if f is None or f.empty:
         return ""
     first = int(f["year"].min())
-    pool = sum(1 for w in t["snap"]["works"] if (w["year"] or 0) >= first)
+    pool = sum(1 for w in t["works"] if (w["year"] or 0) >= first)
     return (
         f"{label}: {len(f)} of {t['n_works']:,} articles, all published since {first} "
         f"({len(f) / max(pool, 1):.0%} of the field's output in those years)"
@@ -248,7 +249,8 @@ def page(t: dict) -> str:
     gaps = t["gaps"]
     gap_lines = (
         "\n".join(
-            f"- **{r.a}** and **{r.b}**: {r.observed} articles together, "
+            f"- **{r.a}** and **{r.b}**: {r.observed} article{'' if r.observed == 1 else 's'} "
+            "together, "
             f"{r.expected:.0f} expected if unrelated"
             for r in gaps.itertuples()
         )

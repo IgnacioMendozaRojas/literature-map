@@ -216,3 +216,11 @@ def test_focus_matches_titles_and_keywords():
     works[1]["keywords"] = ["asymmetric cost behavior"]
     f = an.focus(works, "stick|asymmetric cost")
     assert set(f["id"]) == {"W0", "W1"}
+
+
+def test_gaps_leave_out_sample_descriptors():
+    from collections import Counter
+
+    freq = Counter({"ceo duality": 60, "indonesia stock exchange": 60, "leverage": 60})
+    gp = an.gaps(freq, Counter(), n_works=100)
+    assert all("indonesia" not in (r.a + r.b) for r in gp.itertuples()) and len(gp) == 1

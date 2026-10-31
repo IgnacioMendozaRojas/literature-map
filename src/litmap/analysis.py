@@ -153,13 +153,23 @@ def tokens(keyword: str) -> set[str]:
     return {w[:6] for w in words if w not in {"and", "of", "the", "in", "for", "to", "a"}}
 
 
+# Keywords that describe the sample (a country, a market) rather than a theme; a gap between a
+# theme and a country says where studies were done, not what is missing.
+CONTEXT = re.compile(
+    r"stock exchange|listed (companies|firms)|emerging (markets|economies)|developing countries|"
+    r"\b(china|chinese|indonesia\w*|malaysia\w*|nigeria\w*|india\w*|pakistan\w*|vietnam\w*|"
+    r"ghana\w*|kenya\w*|bangladesh\w*|jordan\w*|saudi|gcc|spain|spanish|italy|italian|"
+    r"europe\w*|africa\w*|asia\w*|latin america\w*|united states|u\.s\.|uk)\b"
+)
+
+
 def gaps(freq: Counter, pairs: Counter, n_works: int, n: int = 6, top: int = 20) -> pd.DataFrame:
     """Under-connected themes: pairs of frequent keywords that appear together far less often
     than if they were independent (observed / expected co-occurrence, VOSviewer's association
     strength scaled by the number of works). A low ratio flags a possible research gap. Pairs
     that share a word (board composition, board structure) are alternative labels for one theme,
     not a gap, and are skipped."""
-    common = [k for k, _ in freq.most_common(top)]
+    common = [k for k, _ in freq.most_common() if not CONTEXT.search(k)][:top]
     rows = []
     for a, b in combinations(common, 2):
         expected = freq[a] * freq[b] / n_works

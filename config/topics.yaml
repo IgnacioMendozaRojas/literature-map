@@ -3,7 +3,8 @@
 # are left out of the themes, clusters and gaps. 'events' are drawn on the publication trend.
 # 'fields' keeps only works whose main OpenAlex topic is in Business, Management and Accounting
 # (14), Decision Sciences (18) or Economics, Econometrics and Finance (20): without it, queries
-# on labour costs drift into engineering and agricultural robotics.
+# on labour costs drift into engineering and agricultural robotics. Each field can name a
+# "focus": a strand followed in its own section (pattern on titles and keywords).
 trade-credit-smes:
   label: Trade credit and SMEs
   query: '"trade credit" AND (SME OR SMEs OR "small and medium" OR "small business" OR "small firms")'
