@@ -1,7 +1,7 @@
 a,b,observed,expected,ratio
-firm performance,earnings management,10,31.570543702684102,0.31675095919079177
-board composition,earnings management,11,28.40055058499656,0.3873164348373964
-family ownership,leverage,13,32.69236063317275,0.3976464148877942
-state ownership,earnings management,6,13.973847212663454,0.42937352245862886
-audit committee,state ownership,8,17.615966964900206,0.45413345835286767
-board independence,independent directors,136,276.53097040605644,0.49180748109442646
+ceo duality,indonesia stock exchange,1,32.53781512605042,0.030733471074380167
+agency theory,indonesia stock exchange,6,20.30252100840336,0.29552980132450335
+emerging markets,indonesia stock exchange,5,15.932773109243698,0.31381856540084385
+board structure,indonesia stock exchange,5,15.865546218487395,0.31514830508474573
+family ownership,leverage,13,30.472049689440993,0.42662046473705667
+board composition,indonesia stock exchange,12,27.428571428571427,0.4375
