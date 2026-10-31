@@ -14,7 +14,15 @@ _Filled in after the first run._
 ## Latest reading
 
 <!-- latest:start -->
-_Pending the first run._
+**Latest reading: 2026-10-31.** 
+
+| Field | Articles | A year, recent | A year, ten years earlier | New | Under-connected |
+|---|---:|---:|---:|---:|---|
+| [Trade credit and SMEs](docs/topics/trade-credit-smes.md) | 443 | 29 (2021-2025) | 17 (2011-2015) | 0 | sme financing / accounts receivable |
+| [Ownership and boards](docs/topics/ownership-and-boards.md) | 2,971 | 189 (2021-2025) | 116 (2011-2015) | 0 | board composition / board structure |
+| [AI, automation and labour costs](docs/topics/ai-and-labour-costs.md) | 2,464 | 273 (2021-2025) | 29 (2011-2015) | 0 | labor cost reduction / labor share |
+
+*New: articles that were not in the previous monthly snapshot. Under-connected: the pair of frequent themes that appear together least often relative to chance.*
 <!-- latest:end -->
 
 ## License

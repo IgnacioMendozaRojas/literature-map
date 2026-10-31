@@ -1,0 +1,7 @@
+a,b,observed,expected,ratio
+labor cost reduction,labor share,0,12.043019480519481,0.0
+agricultural robotics,labor share,0,3.7540584415584415,0.0
+precision agriculture,labor share,0,3.6339285714285716,0.0
+agricultural robotics,industrial robots,0,3.449675324675325,0.0
+precision agriculture,industrial robots,0,3.3392857142857144,0.0
+internet of things,labor share,1,4.384740259740259,0.22806368011847467

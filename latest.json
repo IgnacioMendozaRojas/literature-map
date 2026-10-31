@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "id": "literature-map",
+  "repo": "literature-map",
+  "title": "Bibliometric maps of three research fields",
+  "question": "How are these fields growing, what are their themes and where are the gaps?",
+  "as_of": "2026-10-31",
+  "frequency": "monthly",
+  "updated": "2026-10-31",
+  "source": "OpenAlex",
+  "headline": "Trade credit and SMEs: 29 articles a year in 2021-2025 (17 in 2011-2015); Ownership and boards: 189 articles a year in 2021-2025 (116 in 2011-2015); AI, automation and labour costs: 273 articles a year in 2021-2025 (29 in 2011-2015).",
+  "metrics": [
+    {
+      "id": "trade-credit-smes_per_year",
+      "label": "Trade credit and SMEs: articles a year",
+      "value": 29.2,
+      "unit": "articles",
+      "period": "2021-2025",
+      "previous": 17.0,
+      "change": 12.2,
+      "change_type": "absolute"
+    },
+    {
+      "id": "trade-credit-smes_new",
+      "label": "Trade credit and SMEs: new articles since the last update",
+      "value": 0,
+      "unit": "articles",
+      "period": "2026-10-31"
+    },
+    {
+      "id": "ownership-and-boards_per_year",
+      "label": "Ownership and boards: articles a year",
+      "value": 189.0,
+      "unit": "articles",
+      "period": "2021-2025",
+      "previous": 115.8,
+      "change": 73.2,
+      "change_type": "absolute"
+    },
+    {
+      "id": "ownership-and-boards_new",
+      "label": "Ownership and boards: new articles since the last update",
+      "value": 0,
+      "unit": "articles",
+      "period": "2026-10-31"
+    },
+    {
+      "id": "ai-and-labour-costs_per_year",
+      "label": "AI, automation and labour costs: articles a year",
+      "value": 273.2,
+      "unit": "articles",
+      "period": "2021-2025",
+      "previous": 29.4,
+      "change": 243.8,
+      "change_type": "absolute"
+    },
+    {
+      "id": "ai-and-labour-costs_new",
+      "label": "AI, automation and labour costs: new articles since the last update",
+      "value": 0,
+      "unit": "articles",
+      "period": "2026-10-31"
+    }
+  ]
+}
