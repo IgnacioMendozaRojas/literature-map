@@ -84,7 +84,10 @@ class Client:
             if r.status_code in (429, 500, 502, 503, 504):
                 time.sleep(2 ** (attempt + 1))
                 continue
-            r.raise_for_status()
+            break
+        # surface the reason in the run's annotations (logs need a login to read)
+        msg = f"{r.url[:300]} -> {r.text[:500]}"
+        print(f"::error title=OpenAlex {r.status_code}::{msg}", flush=True)
         r.raise_for_status()
         return {}
 
@@ -93,7 +96,7 @@ class Client:
         out, cursor, count = [], "*", 0
         while cursor and len(out) < limit:
             page = self.get(
-                {"filter": flt, "select": ",".join(FIELDS), "per-page": 200, "cursor": cursor}
+                {"filter": flt, "select": ",".join(FIELDS), "per-page": 100, "cursor": cursor}
             )
             count = page["meta"]["count"]
             out += [compact(w) for w in page["results"]]
