@@ -4,45 +4,45 @@
   "repo": "literature-map",
   "title": "Bibliometric maps of three research fields",
   "question": "How are these fields growing, what are their themes and where are the gaps?",
-  "as_of": "2026-10-31",
+  "as_of": "2026-11-01",
   "frequency": "monthly",
-  "updated": "2026-10-31",
+  "updated": "2026-11-01",
   "source": "OpenAlex",
-  "headline": "6 new articles since the last update. The fastest-growing field is AI, automation and labour costs: 56 articles a year in 2021-2025, against 5 in 2011-2015.",
+  "headline": "10 new articles since the last update. The fastest-growing field is AI, automation and labour costs: 56 articles a year in 2021-2025, against 5 in 2011-2015.",
   "metrics": [
     {
       "id": "trade-credit-smes_per_year",
       "label": "Trade credit and SMEs: articles a year",
-      "value": 28.8,
+      "value": 28.4,
       "unit": "articles",
       "period": "2021-2025",
       "previous": 15.4,
-      "change": 13.4,
+      "change": 13.0,
       "change_type": "absolute"
     },
     {
       "id": "trade-credit-smes_new",
       "label": "Trade credit and SMEs: new articles since the last update",
-      "value": 0,
+      "value": 1,
       "unit": "articles",
-      "period": "2026-10-31"
+      "period": "2026-11-01"
     },
     {
       "id": "ownership-and-boards_per_year",
       "label": "Ownership and boards: articles a year",
-      "value": 177.2,
+      "value": 177.4,
       "unit": "articles",
       "period": "2021-2025",
-      "previous": 108.4,
-      "change": 68.8,
+      "previous": 108.0,
+      "change": 69.4,
       "change_type": "absolute"
     },
     {
       "id": "ownership-and-boards_new",
       "label": "Ownership and boards: new articles since the last update",
-      "value": 6,
+      "value": 8,
       "unit": "articles",
-      "period": "2026-10-31"
+      "period": "2026-11-01"
     },
     {
       "id": "ai-and-labour-costs_per_year",
@@ -57,9 +57,9 @@
     {
       "id": "ai-and-labour-costs_new",
       "label": "AI, automation and labour costs: new articles since the last update",
-      "value": 0,
+      "value": 1,
       "unit": "articles",
-      "period": "2026-10-31"
+      "period": "2026-11-01"
     }
   ]
 }

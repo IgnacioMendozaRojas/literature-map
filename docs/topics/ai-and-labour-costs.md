@@ -1,12 +1,12 @@
 # AI, automation and labour costs
 
-*Rebuilt from OpenAlex on 2026-10-31. Do not edit by hand: see
+*Rebuilt from OpenAlex on 2026-11-01. Do not edit by hand: see
 [`report.py`](../../src/litmap/report.py).*
 
 **Query** (title and abstract, journal articles since 1990):
 `("artificial intelligence" OR automation OR robots OR "digital technologies") AND ("labor cost" OR "labour cost" OR "labor costs" OR "labour costs" OR "cost stickiness" OR "sticky costs" OR "cost behavior" OR "cost behaviour" OR "labor share" OR "labour share")`
 
-**Coverage.** 510 articles; 72% of them published in
+**Coverage.** 511 articles; 72% of them published in
 2021-2025.
 
 <picture>
@@ -16,7 +16,7 @@
 
 ## Focus: Technology and cost stickiness
 
-Technology and cost stickiness: 24 of 502 articles, all published since 2022 (7% of the field's output in those years). Pattern on titles and keywords: `stick|asymmetric cost|cost asymmetr|cost behavio`.
+Technology and cost stickiness: 24 of 503 articles, all published since 2022 (7% of the field's output in those years). Pattern on titles and keywords: `stick|asymmetric cost|cost asymmetr|cost behavio`.
 
 | First author | Year | Title | Journal |
 |---|---|---|---|
@@ -36,15 +36,17 @@ Technology and cost stickiness: 24 of 502 articles, all published since 2022 (7%
 | Chenyue Zhu | 2025 | [The Impact of Digital Transformation on Cost Stickiness in Enterprises](https://openalex.org/W4411238916) | Journal of Economics and Management Sciences |
 | Yosua Samuel Ramli | 2025 | [The Influence of Digital Transformation and Free Cash Flow on Cost Stickiness Moderated b…](https://openalex.org/W7118180272) | Jurnal Ekonomi dan Bisnis Digital |
 
+
+
 ## Themes and clusters
 
 Keyword communities found by modularity on the co-occurrence network (the method behind
 VOSviewer's clustering), largest first:
 
 1. digital transformation, industrial robots, labor productivity, china, robot adoption, artificial intelligence adoption, manufacturing companies, total factor productivity
-2. labor share, job displacement, technological change, productivity, income inequality, labor market, economic growth, wages
+2. labor share, job displacement, technological change, productivity, income inequality, economic growth, labor market, wages
 3. labor cost reduction, digitalization, big data, digital technologies, internet of things, enterprise resource planning, machine learning, digital economy
-4. population aging, income distribution, wage share, robots, capital-labor substitution, technological progress
+4. population aging, income distribution, wage share, robots, technological progress, capital-labor substitution
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../figures/ai-and-labour-costs-map-dark.png">
@@ -74,7 +76,7 @@ are candidates for research gaps, to be read against the literature, not conclus
 |---|---|---|---|---|
 | Daron Acemoğlu | 2019 | [Robots and Jobs: Evidence from US Labor Markets](https://openalex.org/W3021644002) | 73 | 15% |
 | Georg Graetz | 2018 | [Robots at Work](https://openalex.org/W3122245868) | 68 | 14% |
-| Daron Acemoğlu | 2018 | [The Race between Man and Machine: Implications of Technology for Growth, Factor Shares, a…](https://openalex.org/W3125498346) | 63 | 13% |
+| Daron Acemoğlu | 2018 | [The Race between Man and Machine: Implications of Technology for Growth, Factor Shares, a…](https://openalex.org/W3125498346) | 64 | 13% |
 | Loukas Karabarbounis | 2013 | [The Global Decline of the Labor Share*](https://openalex.org/W2155379226) | 47 | 9% |
 | Daron Acemoğlu | 2019 | [Automation and New Tasks: How Technology Displaces and Reinstates Labor](https://openalex.org/W2922903482) | 42 | 8% |
 | David Autor | 2003 | [The Skill Content of Recent Technological Change: An Empirical Exploration](https://openalex.org/W2892380133) | 39 | 8% |
@@ -87,8 +89,8 @@ are candidates for research gaps, to be read against the literature, not conclus
 
 | First author | Year | Title | Journal | Citations |
 |---|---|---|---|---|
-| Daron Acemoğlu | 2018 | [The Race between Man and Machine: Implications of Technology for Growth, Factor Shares, a…](https://openalex.org/W3125498346) | American Economic Review | 3121 |
-| Daron Acemoğlu | 2019 | [Automation and New Tasks: How Technology Displaces and Reinstates Labor](https://openalex.org/W2922903482) | The Journal of Economic Perspectives | 2617 |
+| Daron Acemoğlu | 2018 | [The Race between Man and Machine: Implications of Technology for Growth, Factor Shares, a…](https://openalex.org/W3125498346) | American Economic Review | 3123 |
+| Daron Acemoğlu | 2019 | [Automation and New Tasks: How Technology Displaces and Reinstates Labor](https://openalex.org/W2922903482) | The Journal of Economic Perspectives | 2618 |
 | Daron Acemoğlu | 2019 | [The wrong kind of AI? Artificial intelligence and the future of labour demand](https://openalex.org/W4230775373) | Cambridge Journal of Regions Economy and Society | 634 |
 | Daron Acemoğlu | 2021 | [Demographics and Automation](https://openalex.org/W3169161674) | The Review of Economic Studies | 584 |
 | Jay Dixon | 2021 | [The Robot Revolution: Managerial and Employment Consequences for Firms](https://openalex.org/W3144307509) | Management Science | 463 |
@@ -104,7 +106,7 @@ are candidates for research gaps, to be read against the literature, not conclus
 |---|---|---|---|---|
 | Emin Dinlersoz | 2023 | [Automation, labor share, and productivity: plant-level evidence from U.S. manufacturing](https://openalex.org/W2892262206) | Economics of Innovation and New Technology | 28.0 |
 | Daron Acemoğlu | 2025 | [Power and Progress: Our Thousand-Year Struggle over Technology and Prosperity](https://openalex.org/W4407713486) | Perspectives on Science and Christian Faith | 20.0 |
-| Antonio Minniti | 2025 | [AI innovation and the labor share in European regions](https://openalex.org/W4410421805) | European Economic Review | 19.0 |
+| Antonio Minniti | 2025 | [AI innovation and the labor share in European regions](https://openalex.org/W4410421805) | European Economic Review | 19.5 |
 | Wenbing Luo | 2024 | [The impact of enterprise digital transformation on risk-taking: Evidence from China](https://openalex.org/W4392005796) | Research in International Business and Finance | 18.7 |
 | Guimin Qu | 2025 | [Is new technology always good? Artificial intelligence and corporate tax avoidance: Evide…](https://openalex.org/W4407315828) | International Review of Economics & Finance | 17.0 |
 | Joel Stiebale | 2024 | [Robots and the rise of European superstar firms](https://openalex.org/W3049047383) | International Journal of Industrial Organization | 13.3 |
@@ -141,4 +143,6 @@ are candidates for research gaps, to be read against the literature, not conclus
 
 ## New since the last update (2026-10-31)
 
-_No new articles._
+| First author | Year | Title | Journal |
+|---|---|---|---|
+| Jifan Wang | 2026 | [Opportunity, not risk: How Chinese credit markets price generative AI](https://openalex.org/W7225009832) | International Review of Economics & Finance |

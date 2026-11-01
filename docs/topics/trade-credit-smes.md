@@ -1,6 +1,6 @@
 # Trade credit and SMEs
 
-*Rebuilt from OpenAlex on 2026-10-31. Do not edit by hand: see
+*Rebuilt from OpenAlex on 2026-11-01. Do not edit by hand: see
 [`report.py`](../../src/litmap/report.py).*
 
 **Query** (title and abstract, journal articles since 1990):
@@ -11,7 +11,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../figures/trade-credit-smes-trend-dark.png">
-  <img alt="Trade credit and SMEs: output rose from 15 to 29 articles a year" src="../figures/trade-credit-smes-trend-light.png">
+  <img alt="Trade credit and SMEs: output rose from 15 to 28 articles a year" src="../figures/trade-credit-smes-trend-light.png">
 </picture>
 
 ## Focus: Trade credit through a risk lens
@@ -35,6 +35,8 @@ Trade credit through a risk lens: 32 of 422 articles, all published since 1995 (
 | Chuanli Wei | 2024 | [Credit Risk Transmission Mechanism and Prevention Strategies in Supply Chain Finance: A C…](https://openalex.org/W7118324596) | Artificial Intelligence and Machine Learning Review |
 | Bo Li | 2022 | [Financing preference and the role of credit insurance in a green supply chain](https://openalex.org/W4229042429) | Managerial and Decision Economics |
 | Sonia Baños‐Caballero | 2022 | [Investment in trade credit in small business start-ups: evidence from Spain during a fina…](https://openalex.org/W4283647271) | Applied Economics |
+
+
 
 ## Themes and clusters
 
@@ -65,31 +67,31 @@ are candidates for research gaps, to be read against the literature, not conclus
 - **firm size** and **information asymmetry**: 0 articles together, 4 expected if unrelated
 - **bank lending** and **working capital management**: 0 articles together, 4 expected if unrelated
 - **sme financing** and **accounts payable**: 1 article together, 5 expected if unrelated
+- **sme financing** and **information asymmetry**: 2 articles together, 5 expected if unrelated
 - **bank lending** and **financial performance**: 2 articles together, 5 expected if unrelated
-- **bank lending** and **supply chain finance**: 2 articles together, 4 expected if unrelated
 
 ## Foundations: the works this field cites most
 
 | First author | Year | Title | Cited by articles here | Share |
 |---|---|---|---|---|
-| Mitchell A. Petersen | 1997 | [Trade Credit: Theories and Evidence](https://openalex.org/W3021995853) | 151 | 36% |
+| Mitchell A. Petersen | 1997 | [Trade Credit: Theories and Evidence](https://openalex.org/W3021995853) | 150 | 36% |
 | Vicente Cuñat | 2006 | [Trade Credit: Suppliers as Debt Collectors and Insurance Providers](https://openalex.org/W3124863821) | 89 | 21% |
 | Bruno Biais | 1997 | [Trade Credit and Credit Rationing](https://openalex.org/W2024365411) | 88 | 21% |
-| Raymond J. Fisman | 2003 | [Trade Credit, Financial Intermediary Development, and Industry Growth](https://openalex.org/W3124834107) | 77 | 18% |
-| Chee K. Ng | 1999 | [Evidence on the Determinants of Credit Terms Used in Interfirm Trade](https://openalex.org/W2164367837) | 77 | 18% |
+| Raymond J. Fisman | 2003 | [Trade Credit, Financial Intermediary Development, and Industry Growth](https://openalex.org/W3124834107) | 76 | 18% |
+| Chee K. Ng | 1999 | [Evidence on the Determinants of Credit Terms Used in Interfirm Trade](https://openalex.org/W2164367837) | 76 | 18% |
 | J. Stephen Ferris | 1981 | [A Transactions Theory of Trade Credit Use](https://openalex.org/W2013704297) | 74 | 18% |
 | Mike C. Burkart | 2004 | [In-Kind Finance: A Theory of Trade Credit](https://openalex.org/W2605496294) | 73 | 17% |
-| Janet Kiholm Smith | 1987 | [Trade Credit and Informational Asymmetry](https://openalex.org/W2023128559) | 72 | 17% |
-| Allen N. Berger | 1998 | [The economics of small business finance: The roles of private equity and debt markets in…](https://openalex.org/W2119780569) | 69 | 16% |
+| Janet Kiholm Smith | 1987 | [Trade Credit and Informational Asymmetry](https://openalex.org/W2023128559) | 71 | 17% |
+| Allen N. Berger | 1998 | [The economics of small business finance: The roles of private equity and debt markets in…](https://openalex.org/W2119780569) | 68 | 16% |
 | Jeffrey H. Nilsen | 2002 | [Trade Credit and the Bank Lending Channel](https://openalex.org/W3122858800) | 68 | 16% |
 
 ## Most cited articles
 
 | First author | Year | Title | Journal | Citations |
 |---|---|---|---|---|
-| Mitchell A. Petersen | 1997 | [Trade Credit: Theories and Evidence](https://openalex.org/W3021995853) | Review of Financial Studies | 2602 |
-| Bruno Biais | 1997 | [Trade Credit and Credit Rationing](https://openalex.org/W2024365411) | Review of Financial Studies | 982 |
-| Mike C. Burkart | 2004 | [In-Kind Finance: A Theory of Trade Credit](https://openalex.org/W2605496294) | American Economic Review | 969 |
+| Mitchell A. Petersen | 1997 | [Trade Credit: Theories and Evidence](https://openalex.org/W3021995853) | Review of Financial Studies | 2605 |
+| Bruno Biais | 1997 | [Trade Credit and Credit Rationing](https://openalex.org/W2024365411) | Review of Financial Studies | 984 |
+| Mike C. Burkart | 2004 | [In-Kind Finance: A Theory of Trade Credit](https://openalex.org/W2605496294) | American Economic Review | 970 |
 | Jeffrey H. Nilsen | 2002 | [Trade Credit and the Bank Lending Channel](https://openalex.org/W3122858800) | Journal of money credit and banking | 628 |
 | Susan Coleman | 2000 | [Access to Capital and Terms of Credit: A Comparison of Men- and Women- Owned Small Busine…](https://openalex.org/W187857710) | Journal of Small Business Management | 591 |
 | Eddie Casey | 2014 | [Bank lending constraints, trade credit and alternative financing during the financial cri…](https://openalex.org/W2029710399) | Journal of Corporate Finance | 416 |
@@ -117,8 +119,8 @@ are candidates for research gaps, to be read against the literature, not conclus
 |---|---|
 | Small Business Economics | 14 |
 | RePEc: Research Papers in Economics | 11 |
+| Zenodo (CERN European Organization for Nuclear Research) | 8 |
 | International Small Business Journal Researching Entrepreneurship | 7 |
-| Zenodo (CERN European Organization for Nuclear Research) | 7 |
 | Finance research letters | 7 |
 | Journal of Small Business Management | 6 |
 | International Journal of Managerial Finance | 6 |
@@ -141,4 +143,6 @@ are candidates for research gaps, to be read against the literature, not conclus
 
 ## New since the last update (2026-10-31)
 
-_No new articles._
+| First author | Year | Title | Journal |
+|---|---|---|---|
+| Vincenzo Tumolo | 2026 | [Refused or discouraged? Dutch SMEs and bank loans, 2009–2026](https://openalex.org/W7225017558) | Zenodo (CERN European Organization for Nuclear Research) |
