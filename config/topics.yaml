@@ -36,8 +36,17 @@ ownership-and-boards:
   stop: [board of directors, ownership structure, corporate governance, ownership concentration]
   events: {2002: Sarbanes-Oxley, 2008: Global financial crisis}
   focus:
-    label: Ownership heterogeneity and owner identity
-    pattern: "owner identity|ownership identity|types? of owners|owner types?|multiple large shareholders|ownership constellation|heterogene"
+    label: Combinations of large owners
+    pattern: >-
+      multiple (large )?(shareholders|blockholders|owners)|second (largest )?(shareholder|blockholder)|ownership constellation|coalition|contestab
+  # the literature studies one type of owner at a time; few articles look at how they combine
+  strands:
+    Family owners: "family (ownership|firm|business)"
+    Institutional investors: "institutional (ownership|investor)"
+    The State: "state ownership|state-owned|government ownership"
+    Foreign owners: "foreign ownership"
+    Combinations of large owners: >-
+      multiple (large )?(shareholders|blockholders|owners)|second (largest )?(shareholder|blockholder)|ownership constellation|coalition|contestab
 
 ai-and-labour-costs:
   label: AI, automation and labour costs

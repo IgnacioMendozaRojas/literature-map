@@ -224,3 +224,10 @@ def test_gaps_leave_out_sample_descriptors():
     freq = Counter({"ceo duality": 60, "indonesia stock exchange": 60, "leverage": 60})
     gp = an.gaps(freq, Counter(), n_works=100)
     assert all("indonesia" not in (r.a + r.b) for r in gp.itertuples()) and len(gp) == 1
+
+
+def test_strands_count_each_pattern():
+    works = synthetic()
+    st = an.strands(works, {"Fintech": "fintech", "Supply": "supply chain"})
+    assert set(st["strand"]) == {"Fintech", "Supply"}
+    assert st.set_index("strand").loc["Supply", "works"] == len(works) // 2

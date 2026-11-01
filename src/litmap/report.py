@@ -179,6 +179,7 @@ def analyse(name: str, cfg: dict, snap: dict, fig: Path) -> dict:
         "top_cited": an.top_cited(works),
         "rising": an.rising(works, year),
         "focus": an.focus(works, cfg["focus"]["pattern"]) if cfg.get("focus") else None,
+        "strands": an.strands(works, cfg["strands"]) if cfg.get("strands") else None,
         "n_works": len(works),
         "works": works,
         "journals": an.counts(works, "journal"),
@@ -218,6 +219,16 @@ def focus_text(t: dict) -> str:
     return (
         f"{label}: {len(f)} of {t['n_works']:,} articles, all published since {first} "
         f"({len(f) / max(pool, 1):.0%} of the field's output in those years)"
+    )
+
+
+def strands_section(t: dict) -> str:
+    if t["strands"] is None:
+        return ""
+    return (
+        "## Strands of the field\n\nArticles whose title or keywords match each strand's pattern "
+        "in [`topics.yaml`](../../config/topics.yaml); an article can be in several.\n\n"
+        + table(t["strands"], {"strand": "Strand", "works": "Articles", "share": "Share"})
     )
 
 
@@ -273,6 +284,8 @@ def page(t: dict) -> str:
 {picture(f"{fig}/{name}-trend-light.png", t["titles"]["trend"])}
 
 {focus_section(t)}
+
+{strands_section(t)}
 
 ## Themes and clusters
 
@@ -465,6 +478,10 @@ def main(root: Path, topics_cfg: dict, today: date | None = None) -> list[dict]:
         t["per_year"].rename("articles").to_csv(proc / "per_year.csv", index_label="year")
         for key in ("themes", "gaps", "top_cited", "rising", "foundations", "journals", "authors"):
             t[key].to_csv(proc / f"{key}.csv", index=False)
+        if t["strands"] is not None:
+            t["strands"].to_csv(proc / "strands.csv", index=False)
+            st = "; ".join(f"{r.strand} {r.works}" for r in t["strands"].itertuples())
+            print(f"::notice title={name} strands::{st}")
         for k, title in t["titles"].items():
             if title:
                 print(f"::notice title={name} {k}::{title}")

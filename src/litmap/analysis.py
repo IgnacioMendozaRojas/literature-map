@@ -66,6 +66,14 @@ def focus(works: list[dict], pattern: str) -> pd.DataFrame:
     return df.sort_values(["year", "cited"], ascending=False).reset_index(drop=True)
 
 
+def strands(works: list[dict], patterns: dict[str, str]) -> pd.DataFrame:
+    """Articles in each strand of a field (pattern on titles and keywords), largest first."""
+    rows = [{"strand": k, "works": len(focus(works, p))} for k, p in patterns.items()]
+    df = pd.DataFrame(rows, columns=["strand", "works"])
+    df["share"] = df["works"] / max(len(works), 1)
+    return df.sort_values("works", ascending=False).reset_index(drop=True)
+
+
 def top_cited(works: list[dict], n: int = 10) -> pd.DataFrame:
     df = pd.DataFrame(works)
     df["first_author"] = df["authors"].map(lambda a: a[0] if a else "")
