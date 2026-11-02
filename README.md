@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/IgnacioMendozaRojas/literature-map/actions/workflows/ci.yml/badge.svg)](https://github.com/IgnacioMendozaRojas/literature-map/actions/workflows/ci.yml)
 [![Monthly update](https://github.com/IgnacioMendozaRojas/literature-map/actions/workflows/update.yml/badge.svg)](https://github.com/IgnacioMendozaRojas/literature-map/actions/workflows/update.yml)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23893525.svg)](https://doi.org/10.5281/zenodo.23893525)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23893524.svg)](https://doi.org/10.5281/zenodo.23893524)
 
 **Research tool: a bibliometric review that rebuilds itself every month.** For each research field it maps growth, themes, clusters, foundational works and under-connected themes, from open data (OpenAlex), so any reader can rerun it.
 

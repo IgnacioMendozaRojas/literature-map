@@ -8,5 +8,7 @@ authors:
     orcid: "https://orcid.org/0009-0002-9957-0224"
 repository-code: "https://github.com/IgnacioMendozaRojas/literature-map"
 url: "https://ignaciomendozarojas.github.io/#c-research"
+version: "1.0.0"
+doi: "10.5281/zenodo.23893524"
 license: MIT
 keywords: [bibliometrics, literature review, OpenAlex, corporate governance, trade credit, cost stickiness]
