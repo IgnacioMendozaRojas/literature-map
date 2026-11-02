@@ -1,0 +1,20 @@
+{
+  "title": "literature-map: reproducible bibliometric maps of research fields from OpenAlex",
+  "description": "A bibliometric review that rebuilds itself every month from OpenAlex: growth, themes, keyword clusters, foundational works and under-connected themes for ownership and boards, trade credit in SMEs, and AI and labour costs.",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Mendoza Rojas, Ignacio",
+      "orcid": "0009-0002-9957-0224"
+    }
+  ],
+  "keywords": [
+    "bibliometrics",
+    "literature review",
+    "OpenAlex",
+    "corporate governance",
+    "trade credit",
+    "cost stickiness"
+  ]
+}

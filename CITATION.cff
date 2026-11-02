@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software or its data, please cite it as below."
+title: "literature-map: reproducible bibliometric maps of research fields from OpenAlex"
+abstract: "A bibliometric review that rebuilds itself every month from OpenAlex: growth, themes, keyword clusters, foundational works and under-connected themes for ownership and boards, trade credit in SMEs, and AI and labour costs."
+authors:
+  - family-names: "Mendoza Rojas"
+    given-names: "Ignacio"
+    orcid: "https://orcid.org/0009-0002-9957-0224"
+repository-code: "https://github.com/IgnacioMendozaRojas/literature-map"
+url: "https://ignaciomendozarojas.github.io/#c-research"
+license: MIT
+keywords: [bibliometrics, literature review, OpenAlex, corporate governance, trade credit, cost stickiness]
