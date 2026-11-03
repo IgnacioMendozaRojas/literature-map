@@ -34,13 +34,13 @@
 ## Latest reading
 
 <!-- latest:start -->
-**Latest reading: 2026-11-01.** 10 new articles since the last update. The fastest-growing field is AI, automation and labour costs: 56 articles a year in 2021-2025, against 5 in 2011-2015.
+**Latest reading: 2026-11-03.** 15 new articles since the last update. The fastest-growing field is AI, automation and labour costs: 56 articles a year in 2021-2025, against 5 in 2011-2015.
 
 | Field | Articles | A year, recent | A year, ten years earlier | New | Under-connected |
 |---|---:|---:|---:|---:|---|
-| [Trade credit and SMEs](docs/topics/trade-credit-smes.md) | 440 | 28 (2021-2025) | 15 (2011-2015) | 1 | sme financing / accounts receivable |
-| [Ownership and boards](docs/topics/ownership-and-boards.md) | 2,908 | 177 (2021-2025) | 108 (2011-2015) | 8 | state ownership / family business |
-| [AI, automation and labour costs](docs/topics/ai-and-labour-costs.md) | 511 | 56 (2021-2025) | 5 (2011-2015) | 1 | labor share / digital transformation |
+| [Trade credit and SMEs](docs/topics/trade-credit-smes.md) | 443 | 29 (2021-2025) | 15 (2011-2015) | 3 | sme financing / accounts receivable |
+| [Ownership and boards](docs/topics/ownership-and-boards.md) | 2,910 | 178 (2021-2025) | 108 (2011-2015) | 11 | state ownership / family business |
+| [AI, automation and labour costs](docs/topics/ai-and-labour-costs.md) | 510 | 56 (2021-2025) | 5 (2011-2015) | 1 | labor share / digital transformation |
 
 *New: articles that were not in the previous monthly snapshot. Under-connected: the pair of frequent themes that appear together least often relative to chance.*
 <!-- latest:end -->

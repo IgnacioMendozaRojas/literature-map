@@ -1,7 +1,7 @@
 a,b,observed,expected,ratio
-state ownership,family business,3,11.62468054034319,0.258071608040201
-foreign ownership,family business,4,13.902884264330048,0.2877100840336134
-firm performance,earnings management,10,29.41292442497262,0.3399865941759142
-managerial ownership,family business,8,22.72362175976634,0.35205655526992286
-institutional ownership,family business,10,26.286966046002192,0.3804166666666666
-audit committee,family business,5,12.968236582694415,0.3855574324324324
+state ownership,family business,2,11.535180459351075,0.17338263645270377
+foreign ownership,family business,4,13.853809697411593,0.288729243967264
+audit committee,family business,4,12.868392271235873,0.3108391410278203
+firm performance,earnings management,10,29.17973022238425,0.34270364817591203
+managerial ownership,family business,8,22.548669340138535,0.354788119836381
+institutional ownership,family business,10,26.20051039008385,0.38167195413814214

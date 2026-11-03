@@ -1,7 +1,7 @@
 a,b,observed,expected,ratio
-sme financing,accounts receivable,0,5.203791469194313,0.0
-firm size,information asymmetry,0,4.350710900473934,0.0
-bank lending,working capital management,0,3.7535545023696684,0.0
-sme financing,accounts payable,1,5.059241706161138,0.19765807962529272
-sme financing,information asymmetry,2,4.914691943127962,0.4069431051108968
-bank lending,financial performance,2,4.587677725118484,0.4359504132231405
+sme financing,accounts receivable,0,5.421176470588235,0.0
+firm size,information asymmetry,0,4.447058823529412,0.0
+bank lending,working capital management,0,3.7270588235294118,0.0
+sme financing,accounts payable,1,5.270588235294118,0.18973214285714285
+bank lending,financial performance,2,4.555294117647059,0.43904958677685946
+bank lending,supply chain finance,2,4.348235294117647,0.4599567099567099

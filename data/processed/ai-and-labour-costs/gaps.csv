@@ -1,7 +1,7 @@
 a,b,observed,expected,ratio
-labor share,digital transformation,1,6.172962226640159,0.16199677938808374
-digital transformation,industrial robots,1,3.131212723658052,0.31936507936507935
-labor cost reduction,industrial robots,2,3.4095427435387675,0.5865889212827988
-labor share,digitalization,2,3.017892644135189,0.6627140974967062
-labor share,artificial intelligence adoption,3,3.15506958250497,0.9508506616257089
-labor share,industrial robots,5,4.801192842942346,1.0414078674948242
+labor share,digital transformation,1,6.095617529880478,0.16405228758169935
+digital transformation,industrial robots,1,3.137450199203187,0.31873015873015875
+labor cost reduction,industrial robots,2,3.4860557768924303,0.5737142857142857
+labor share,artificial intelligence adoption,3,3.1155378486055776,0.962915601023018
+labor share,industrial robots,5,4.741035856573705,1.0546218487394958
+labor share,job displacement,6,3.5219123505976095,1.7036199095022624

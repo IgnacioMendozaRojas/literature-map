@@ -4,54 +4,54 @@
   "repo": "literature-map",
   "title": "Bibliometric maps of three research fields",
   "question": "How are these fields growing, what are their themes and where are the gaps?",
-  "as_of": "2026-11-01",
+  "as_of": "2026-11-03",
   "frequency": "monthly",
-  "updated": "2026-11-01",
+  "updated": "2026-11-03",
   "source": "OpenAlex",
-  "headline": "10 new articles since the last update. The fastest-growing field is AI, automation and labour costs: 56 articles a year in 2021-2025, against 5 in 2011-2015.",
+  "headline": "15 new articles since the last update. The fastest-growing field is AI, automation and labour costs: 56 articles a year in 2021-2025, against 5 in 2011-2015.",
   "metrics": [
     {
       "id": "trade-credit-smes_per_year",
       "label": "Trade credit and SMEs: articles a year",
-      "value": 28.4,
+      "value": 28.8,
       "unit": "articles",
       "period": "2021-2025",
       "previous": 15.4,
-      "change": 13.0,
+      "change": 13.4,
       "change_type": "absolute"
     },
     {
       "id": "trade-credit-smes_new",
       "label": "Trade credit and SMEs: new articles since the last update",
-      "value": 1,
+      "value": 3,
       "unit": "articles",
-      "period": "2026-11-01"
+      "period": "2026-11-03"
     },
     {
       "id": "ownership-and-boards_per_year",
       "label": "Ownership and boards: articles a year",
-      "value": 177.4,
+      "value": 178.0,
       "unit": "articles",
       "period": "2021-2025",
-      "previous": 108.0,
-      "change": 69.4,
+      "previous": 108.2,
+      "change": 69.8,
       "change_type": "absolute"
     },
     {
       "id": "ownership-and-boards_new",
       "label": "Ownership and boards: new articles since the last update",
-      "value": 8,
+      "value": 11,
       "unit": "articles",
-      "period": "2026-11-01"
+      "period": "2026-11-03"
     },
     {
       "id": "ai-and-labour-costs_per_year",
       "label": "AI, automation and labour costs: articles a year",
-      "value": 56.2,
+      "value": 56.0,
       "unit": "articles",
       "period": "2021-2025",
       "previous": 4.6,
-      "change": 51.6,
+      "change": 51.4,
       "change_type": "absolute"
     },
     {
@@ -59,7 +59,7 @@
       "label": "AI, automation and labour costs: new articles since the last update",
       "value": 1,
       "unit": "articles",
-      "period": "2026-11-01"
+      "period": "2026-11-03"
     }
   ]
 }
